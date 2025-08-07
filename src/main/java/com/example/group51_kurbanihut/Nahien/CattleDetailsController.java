@@ -3,12 +3,14 @@ package com.example.group51_kurbanihut.Nahien;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class ViewCattleController
+public class CattleDetailsController
 {
     @javafx.fxml.FXML
     private TableColumn cattleNameTableCol;
     @javafx.fxml.FXML
-    private TableView cattleTableCol;
+    private TableColumn availabilityTableCol;
+    @javafx.fxml.FXML
+    private TableView cattleDetailsTableCol;
     @javafx.fxml.FXML
     private TableColumn cattleIdTableCol;
     @javafx.fxml.FXML

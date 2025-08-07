@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.ViewCattleController">
    <children>
       <TableView fx:id="cattleTableCol" layoutX="10.0" layoutY="123.0" prefHeight="262.0" prefWidth="580.0">
         <columns>
           <TableColumn fx:id="cattleNameTableCol" prefWidth="75.0" text="Cattle Name" />
           <TableColumn fx:id="cattleIdTableCol" prefWidth="75.0" text="Cattle Id" />
+            <TableColumn fx:id="cattleTypeTableCol" prefWidth="75.0" text="Cattle Type" />
             <TableColumn fx:id="cattlePriceTableCol" prefWidth="75.0" text="Cattle Price" />
         </columns>
          <columnResizePolicy>
