@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="440.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.DeleteSolveFeedbackController">
+
+    <Label layoutX="70.0" prefHeight="47.0" prefWidth="398.0" text=" Delete a solved Feedback from the system">
+      <font>
+         <Font size="21.0" />
+      </font></Label>
+
+    <TableView fx:id="solvedFeedbackTable" layoutX="41.0" layoutY="66.0" prefHeight="300" prefWidth="455.0">
+        <columns>
+            <TableColumn fx:id="solvedFeedbackColumn" prefWidth="454.40000076293944" text="Solved Feedbacks" />
+        </columns>
+    </TableView>
+
+    <Button layoutX="193.0" layoutY="380.0" onAction="#deleteFeedbackButton" text="Delete Selected Feedback" />
+   <Button layoutX="468.0" layoutY="406.0" onAction="#previousButton" text="Previous" />
+
+</AnchorPane>
