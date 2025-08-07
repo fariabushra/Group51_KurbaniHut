@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.group51_kurbanihut.Nahien.CustomerServiceOfficerDashboardController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.CustomerServiceOfficerDashboardController">
+   <children>
+      <Label layoutX="63.0" layoutY="8.0" text=" Customer Service Officer Dashboard">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="28.0" layoutY="96.0" mnemonicParsing="false" onAction="#feedbackButton" prefHeight="26.0" prefWidth="156.0" text="Feedback" />
+      <Button layoutX="28.0" layoutY="142.0" mnemonicParsing="false" onAction="#feedbackReplyButton" prefHeight="26.0" prefWidth="156.0" text="Feedback Reply" />
+      <Button layoutX="28.0" layoutY="187.0" mnemonicParsing="false" onAction="#solveFeedbackButton" prefHeight="26.0" prefWidth="156.0" text="Solve Feedback" />
+      <Button layoutX="292.0" layoutY="142.0" mnemonicParsing="false" onAction="#topPriorityButton" prefHeight="26.0" prefWidth="174.0" text="Top Priority" />
+      <Button layoutX="292.0" layoutY="96.0" mnemonicParsing="false" onAction="#paymentReminderButton" prefHeight="26.0" prefWidth="174.0" text="Payment Reminder" />
+      <Button layoutX="292.0" layoutY="235.0" mnemonicParsing="false" onAction="#flagAsSuspiciousButton" text="Flag an Account as Suspicious" />
+      <Button layoutX="292.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateFaqButton" prefHeight="26.0" prefWidth="174.0" text="Update FAQ" />
+      <Button layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onAction="#deleteSolveFeedbackButton" prefHeight="26.0" prefWidth="156.0" text="Delete Solved Feedback" />
+   </children>
 </AnchorPane>
