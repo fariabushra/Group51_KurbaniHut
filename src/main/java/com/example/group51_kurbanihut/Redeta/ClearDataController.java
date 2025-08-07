@@ -1,16 +1,20 @@
 package com.example.group51_kurbanihut.Redeta;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
-public class SendAlertsController
+public class ClearDataController
 {
     @javafx.fxml.FXML
-    private Label sendAlertsLabel;
+    private TableColumn nameTableCol;
     @javafx.fxml.FXML
-    private TableColumn sendAlertsTableView;
+    private TableColumn roleTableCol;
+    @javafx.fxml.FXML
+    private TableView clearDataTableView;
+    @javafx.fxml.FXML
+    private TableColumn dateTableCol;
     @javafx.fxml.FXML
     private TextField filteredNameTextField;
 
@@ -19,6 +23,6 @@ public class SendAlertsController
     }
 
     @javafx.fxml.FXML
-    public void sendAlertOnHandle(ActionEvent actionEvent) {
+    public void clearDataOnHandle(ActionEvent actionEvent) {
     }
 }
