@@ -20,7 +20,7 @@ public class SellerController
     public void handleAddCattleButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleEditDetailsButton(ActionEvent actionEvent) {
     }
 
@@ -42,5 +42,9 @@ public class SellerController
 
     @javafx.fxml.FXML
     public void handleLogoutButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleUpdatePriceButton(ActionEvent actionEvent) {
     }
 }
