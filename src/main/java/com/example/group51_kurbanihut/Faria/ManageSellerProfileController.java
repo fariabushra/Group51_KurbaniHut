@@ -1,6 +1,7 @@
 package com.example.group51_kurbanihut.Faria;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class ManageSellerProfileController
@@ -15,6 +16,8 @@ public class ManageSellerProfileController
     private TextField emailTextField;
     @javafx.fxml.FXML
     private TextField nameTextField;
+    @javafx.fxml.FXML
+    private ComboBox userComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
