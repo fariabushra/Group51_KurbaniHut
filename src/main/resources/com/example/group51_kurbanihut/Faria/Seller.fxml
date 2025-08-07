@@ -42,7 +42,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="378.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleBuyerQueriesButton" text="Buyer Queries">
+      <Button layoutX="378.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleSearchCattleButton" text="Search Cattle">
          <font>
             <Font size="14.0" />
          </font>

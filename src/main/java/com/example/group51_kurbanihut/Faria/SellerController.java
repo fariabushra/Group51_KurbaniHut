@@ -32,7 +32,7 @@ public class SellerController
     public void handleViewSalesButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleBuyerQueriesButton(ActionEvent actionEvent) {
     }
 
@@ -46,5 +46,9 @@ public class SellerController
 
     @javafx.fxml.FXML
     public void handleUpdatePriceButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleSearchCattleButton(ActionEvent actionEvent) {
     }
 }
