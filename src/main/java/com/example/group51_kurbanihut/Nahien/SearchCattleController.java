@@ -1,5 +1,9 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class SearchCattleController
 {
     @javafx.fxml.FXML

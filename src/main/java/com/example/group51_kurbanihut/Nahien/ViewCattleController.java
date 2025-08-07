@@ -1,5 +1,8 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class ViewCattleController
 {
     @javafx.fxml.FXML
