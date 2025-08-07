@@ -17,5 +17,6 @@ public class AddFavouriteController
 
     @javafx.fxml.FXML
     public void addCattleFavouriteButton(ActionEvent actionEvent) {
+
     }
 }
