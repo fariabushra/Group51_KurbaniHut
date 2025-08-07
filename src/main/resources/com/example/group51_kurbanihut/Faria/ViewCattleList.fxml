@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="475.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.ViewCattleListController">
+   <children>
+      <TableView fx:id="cattleListTableView" layoutX="48.0" layoutY="94.0" prefHeight="264.0" prefWidth="789.0">
+        <columns>
+          <TableColumn fx:id="CattleIDTableCol" prefWidth="112.0" text="Cattle ID" />
+          <TableColumn fx:id="colourTableCol" prefWidth="86.39998626708984" text="Colour" />
+            <TableColumn fx:id="ageTableCol" prefWidth="111.20001220703125" text="Age" />
+            <TableColumn fx:id="weightTableCol" prefWidth="104.79998779296875" text="Weight" />
+            <TableColumn fx:id="heightTableCol" prefWidth="96.80001831054688" text="Height" />
+            <TableColumn fx:id="priceTableCol" prefWidth="158.4000244140625" text="Price" />
+            <TableColumn fx:id="healthStatusTableCol" prefWidth="121.59991455078125" text="Health Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="711.0" layoutY="419.0" mnemonicParsing="false" onAction="#handleDashboardButton" text="&lt;&lt;Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
