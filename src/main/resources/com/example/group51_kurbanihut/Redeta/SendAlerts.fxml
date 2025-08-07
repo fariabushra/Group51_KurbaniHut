@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.group51_kurbanihut.Redeta.SendAlertsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.SendAlertsController">
+   <children>
+      <TableView layoutX="65.0" layoutY="141.0" prefHeight="159.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="sendAlertsTableView" prefWidth="93.33334350585938" text="Name" />
+          <TableColumn prefWidth="105.33331298828125" text="Role" />
+        </columns>
+      </TableView>
+      <Text layoutX="361.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="filteredNameTextField" layoutX="403.0" layoutY="137.0" />
+      <Button layoutX="478.0" layoutY="187.0" mnemonicParsing="false" onAction="#sendAlertOnHandle" text="Send Alert" />
+      <Label fx:id="sendAlertsLabel" layoutX="177.0" layoutY="47.0" prefHeight="42.0" prefWidth="200.0" text="                     Send Alerts" />
+   </children>
 </AnchorPane>
