@@ -47,7 +47,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="356.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleManageSellerProfileButton" text="Manage Seller Profile">
+      <Button layoutX="383.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleSaleACattleButton" text="Sale a Cattle">
          <font>
             <Font size="14.0" />
          </font>

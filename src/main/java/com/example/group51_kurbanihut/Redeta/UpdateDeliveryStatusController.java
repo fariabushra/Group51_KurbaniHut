@@ -1,5 +1,6 @@
 package com.example.group51_kurbanihut.Redeta;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
@@ -14,4 +15,9 @@ public class UpdateDeliveryStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
+}

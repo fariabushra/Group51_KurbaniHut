@@ -23,31 +23,76 @@ public class LoginController {
 
     @javafx.fxml.FXML
     public void handleLoginButton(ActionEvent actionEvent) {
-        if ((userNameTextfield.getText().equals("0001")) && (passwordTextField.getText().equals("1234"))) {
+        if ((userNameTextfield.getText().equals("Delivery Man")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/BuyerDashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/DeliveryMan.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                nextStage.setTitle("Dashboard");
+                nextStage.setTitle(" Delivery Man Dashboard");
                 nextStage.setScene(nextScene);
                 nextStage.show();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
             userNameTextfield.setText("Login Successful");
-        } else if ((userNameTextfield.getText().equals("0002")) && (passwordTextField.getText().equals("1234"))) {
+        } else if ((userNameTextfield.getText().equals("Security Manager")) && (passwordTextField.getText().equals("1234"))) {
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/CustomerServiceOfficerDashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/SecurityManager.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                nextStage.setTitle("Customer Service Officer Dashboard");
+                nextStage.setTitle("Security Manager Dashboard");
                 nextStage.setScene(nextScene);
                 nextStage.show();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-
-
+        } else if ((userNameTextfield.getText().equals("Seller")) && (passwordTextField.getText().equals("1234"))) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/Seller.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setTitle("Seller Dashboard");
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            userNameTextfield.setText("Login Successful");
+        } else if ((userNameTextfield.getText().equals("Account Manager")) && (passwordTextField.getText().equals("1234"))) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Faria/AccountManager.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setTitle("Account Manager Dashboard");
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        } else if ((userNameTextfield.getText().equals("Buyer")) && (passwordTextField.getText().equals("1234"))) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/BuyerDashboard.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setTitle("Buyer Dashboard");
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            userNameTextfield.setText("Login Successful");
+        } else if ((userNameTextfield.getText().equals("Customer Service Officer")) && (passwordTextField.getText().equals("1234"))) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/CustomerServiceOfficerDashboard.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setTitle("Customer Service Dashboard");
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
+
 }

@@ -17,5 +17,6 @@
       <RadioButton fx:id="editorRadioButton" layoutX="161.0" layoutY="232.0" mnemonicParsing="false" text="Editor" />
       <Text layoutX="64.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Access Level" />
       <Button layoutX="260.0" layoutY="299.0" mnemonicParsing="false" onAction="#updatePermissionOnHandle" text="Update Permission" />
+      <Button layoutX="482.0" layoutY="331.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

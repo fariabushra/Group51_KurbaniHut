@@ -21,4 +21,8 @@ public class SendAlertsController
     @javafx.fxml.FXML
     public void sendAlertOnHandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
 }

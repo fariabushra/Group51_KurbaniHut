@@ -21,4 +21,8 @@ public class CommunicateWithAdminController
     @javafx.fxml.FXML
     public void requestSupportOnHandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
 }
