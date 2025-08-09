@@ -39,4 +39,8 @@ public class AccountManagerController
     @javafx.fxml.FXML
     public void handlePendingSellerButton(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void handleLogOutButton(ActionEvent actionEvent) {
+    }
 }
