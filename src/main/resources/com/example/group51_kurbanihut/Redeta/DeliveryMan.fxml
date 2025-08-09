@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.DeliveryManController">
    <children>
       <Label fx:id="deliverymanDashboardLabel" layoutX="178.0" layoutY="37.0" prefHeight="58.0" prefWidth="205.0" text="             Delivery Man Dashboard" />
@@ -15,5 +14,6 @@
       <Button layoutX="365.0" layoutY="265.0" mnemonicParsing="false" onAction="#helpSupportOnHandle" text="Help &amp; Support" />
       <Button layoutX="365.0" layoutY="121.0" mnemonicParsing="false" onAction="#deliveryHistoryOnHandle" text="Delivery History" />
       <Button layoutX="71.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewInstructionsOnHandle" text="View Instructions" />
+      <Button layoutX="495.0" layoutY="342.0" mnemonicParsing="false" onAction="#logoutOnHandle" text="Logout" />
    </children>
 </AnchorPane>

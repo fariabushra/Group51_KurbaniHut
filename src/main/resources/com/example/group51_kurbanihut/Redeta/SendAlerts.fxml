@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.SendAlertsController">
    <children>
       <TableView layoutX="65.0" layoutY="141.0" prefHeight="159.0" prefWidth="200.0">
@@ -21,5 +20,6 @@
       <TextField fx:id="filteredNameTextField" layoutX="403.0" layoutY="137.0" />
       <Button layoutX="478.0" layoutY="187.0" mnemonicParsing="false" onAction="#sendAlertOnHandle" text="Send Alert" />
       <Label fx:id="sendAlertsLabel" layoutX="177.0" layoutY="47.0" prefHeight="42.0" prefWidth="200.0" text="                     Send Alerts" />
+      <Button layoutX="462.0" layoutY="321.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

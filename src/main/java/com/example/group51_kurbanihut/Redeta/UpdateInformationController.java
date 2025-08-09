@@ -24,4 +24,8 @@ public class UpdateInformationController
     @javafx.fxml.FXML
     public void saveChangesOnhandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
 }

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.UpdateInformationController">
    <children>
       <TextField fx:id="phoneNumberTextField" layoutX="173.0" layoutY="96.0" />
@@ -19,5 +18,6 @@
       <Text layoutX="74.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" />
       <Button layoutX="254.0" layoutY="275.0" mnemonicParsing="false" onAction="#saveChangesOnhandle" text="Save Changes" />
       <Label fx:id="confirmationMessageLabel" layoutX="408.0" layoutY="101.0" prefHeight="131.0" prefWidth="149.0" style="-fx-border-color: green;" text="   Confirmation Message" />
+      <Button layoutX="474.0" layoutY="347.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

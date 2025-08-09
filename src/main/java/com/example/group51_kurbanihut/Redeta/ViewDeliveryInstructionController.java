@@ -19,4 +19,9 @@ public class ViewDeliveryInstructionController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
+}

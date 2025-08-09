@@ -10,10 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="513.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AssignedDeliveriesController">
+<AnchorPane prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AssignedDeliveriesController">
    <children>
-      <TableView fx:id="assignedDeliveriesTableView" layoutX="52.0" layoutY="310.0" prefHeight="179.0" prefWidth="517.0">
+      <TableView fx:id="assignedDeliveriesTableView" layoutX="52.0" layoutY="296.0" prefHeight="179.0" prefWidth="507.0">
         <columns>
           <TableColumn fx:id="customerNameTableCol" prefWidth="109.33331298828125" text="Customer Name" />
           <TableColumn fx:id="cattleIDTableCol" prefWidth="98.66665649414062" text="Cattle Id" />
@@ -34,5 +33,6 @@
       <DatePicker fx:id="filteredDateDatePicker" layoutX="354.0" layoutY="159.0" promptText="Filtered Date" />
       <Label fx:id="assignedDeliveriesLabel" layoutX="96.0" layoutY="32.0" prefHeight="38.0" prefWidth="391.0" text="                                               Assigned Deliveries" />
       <ComboBox fx:id="deliveryStatusComboBox" layoutX="115.0" layoutY="256.0" prefWidth="150.0" promptText="Delivery Status" />
+      <Button layoutX="517.0" layoutY="494.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

@@ -25,4 +25,8 @@ public class UserAccessController
     @javafx.fxml.FXML
     public void updatePermissionOnHandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
 }

@@ -4,4 +4,9 @@ public class SecurityManagerController
 {
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOnHandle(ActionEvent actionEvent) {
+    }
+}

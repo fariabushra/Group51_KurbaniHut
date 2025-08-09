@@ -41,4 +41,8 @@ public class AssignedDeliveriesController
     @javafx.fxml.FXML
     public void searchDeliveryOnHandle(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
 }

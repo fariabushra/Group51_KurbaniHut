@@ -10,11 +10,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.ViewEntryLogsController">
    <children>
-      <Button layoutX="204.0" layoutY="239.0" mnemonicParsing="false" text="Submit" />
-      <TableView layoutX="27.0" layoutY="294.0" prefHeight="167.0" prefWidth="494.0">
+      <Button layoutX="204.0" layoutY="226.0" mnemonicParsing="false" text="Submit" />
+      <TableView layoutX="31.0" layoutY="271.0" prefHeight="167.0" prefWidth="494.0">
         <columns>
           <TableColumn prefWidth="168.66665649414062" text="Name" />
           <TableColumn prefWidth="159.33331298828125" text="Date" />
@@ -30,5 +29,6 @@
       <TextField layoutX="398.0" layoutY="107.0" />
       <Text layoutX="300.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By Name" />
       <Button layoutX="486.0" layoutY="158.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="522.0" layoutY="449.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

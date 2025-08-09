@@ -14,4 +14,9 @@ public class UpdateDeliveryStatusController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void backOnHandle(ActionEvent actionEvent) {
+    }
+}
