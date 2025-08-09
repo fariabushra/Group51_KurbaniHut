@@ -16,7 +16,7 @@
       <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#searchCattleByTypeButton" text="Search Cattle by Type" />
       <Button layoutX="14.0" layoutY="168.0" mnemonicParsing="false" onAction="#viewCattleDetailsButton" prefHeight="26.0" prefWidth="130.0" text="View Cattle Details" />
       <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#addToFavouriteButton" prefHeight="26.0" prefWidth="130.0" text="Add to Favourite" />
-      <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#bookCatlleButton" prefHeight="26.0" prefWidth="98.0" text="Book Cattle" />
+      <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#bookCattleButton" prefHeight="26.0" prefWidth="98.0" text="Book Cattle" />
       <Button layoutX="250.0" layoutY="132.0" mnemonicParsing="false" onAction="#cancelBookingButton" text="Cancel Booking" />
       <Button layoutX="250.0" layoutY="168.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="26.0" prefWidth="98.0" text="Payment" />
       <Button layoutX="251.0" layoutY="208.0" mnemonicParsing="false" onAction="#sendFeedbackButton" prefHeight="26.0" prefWidth="98.0" text="Send Feedback" />

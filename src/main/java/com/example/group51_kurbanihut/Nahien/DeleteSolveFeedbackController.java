@@ -7,9 +7,9 @@ import javafx.scene.control.TableView;
 public class DeleteSolveFeedbackController
 {
     @javafx.fxml.FXML
-    private TableColumn feedbackColumn;
-    @javafx.fxml.FXML
     private TableView solvedFeedbackTable;
+    @javafx.fxml.FXML
+    private TableColumn solvedFeedbackColumn;
 
     @javafx.fxml.FXML
     public void initialize() {

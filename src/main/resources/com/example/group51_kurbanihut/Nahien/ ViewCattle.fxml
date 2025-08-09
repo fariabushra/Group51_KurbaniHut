@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.ViewCattleController">
+<AnchorPane prefHeight="441.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.ViewCattleController">
    <children>
-      <TableView fx:id="cattleTableCol" layoutX="10.0" layoutY="123.0" prefHeight="262.0" prefWidth="580.0">
+      <TableView fx:id="cattleTableCol" layoutX="10.0" layoutY="101.0" prefHeight="262.0" prefWidth="580.0">
         <columns>
           <TableColumn fx:id="cattleNameTableCol" prefWidth="75.0" text="Cattle Name" />
           <TableColumn fx:id="cattleIdTableCol" prefWidth="75.0" text="Cattle Id" />
@@ -24,5 +25,6 @@
             <Font size="28.0" />
          </font>
       </Label>
+      <Button layoutX="537.0" layoutY="401.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
    </children>
 </AnchorPane>

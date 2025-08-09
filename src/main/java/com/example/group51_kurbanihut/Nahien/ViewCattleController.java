@@ -18,4 +18,9 @@ public class ViewCattleController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void previousButton(ActionEvent actionEvent) {
+    }
+}

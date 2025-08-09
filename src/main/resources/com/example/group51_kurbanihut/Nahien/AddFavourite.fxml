@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.AddFavouriteController">
    <children>
       <TextField fx:id="cattleId" layoutX="41.0" layoutY="106.0" promptText="Cattle Id " />
@@ -18,5 +17,6 @@
       </Label>
       <Button layoutX="209.0" layoutY="106.0" mnemonicParsing="false" onAction="#addCattleFavouriteButton" text="Add Favourite" />
       <TextArea fx:id="favouriteCattleTextArea" layoutX="41.0" layoutY="166.0" prefHeight="200.0" prefWidth="362.0" />
+      <Button layoutX="540.0" layoutY="366.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
    </children>
 </AnchorPane>
