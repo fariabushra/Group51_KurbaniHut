@@ -13,7 +13,7 @@ public class BuyerDashboardController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void cattlelIstButton(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/ViewCattle.fxml"));
@@ -123,5 +123,9 @@ public class BuyerDashboardController
             throw new RuntimeException(e);
         }
 
+    }
+
+    @javafx.fxml.FXML
+    public void cattlelistButton(ActionEvent actionEvent) {
     }
 }
