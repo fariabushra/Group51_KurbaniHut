@@ -97,7 +97,7 @@ public class LoginController {
                 throw new RuntimeException(e);
             }
             userNameTextfield.setText("Login Successful");
-        } else if ((userNameTextfield.getText().equals("Customer Service Officer")) && (passwordTextField.getText().equals("1234"))) {
+        } else if ((userNameTextfield.getText().equals("CSO")) && (passwordTextField.getText().equals("1234"))) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/CustomerServiceOfficerDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());

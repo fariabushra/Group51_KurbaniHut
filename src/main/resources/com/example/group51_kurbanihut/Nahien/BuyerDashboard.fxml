@@ -20,5 +20,6 @@
       <Button layoutX="250.0" layoutY="132.0" mnemonicParsing="false" onAction="#cancelBookingButton" text="Cancel Booking" />
       <Button layoutX="250.0" layoutY="168.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="26.0" prefWidth="98.0" text="Payment" />
       <Button layoutX="251.0" layoutY="208.0" mnemonicParsing="false" onAction="#sendFeedbackButton" prefHeight="26.0" prefWidth="98.0" text="Send Feedback" />
+      <Button layoutX="349.0" layoutY="341.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="26.0" prefWidth="59.0" text="Log Out" />
    </children>
 </AnchorPane>
