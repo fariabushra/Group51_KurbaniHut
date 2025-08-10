@@ -5,10 +5,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.ViewDeliveryInstructionController">
    <children>
-      <Label fx:id="viewInstructionsLabel" layoutX="163.0" layoutY="47.0" prefHeight="53.0" prefWidth="259.0" text="                          View Instructions" />
+      <Label fx:id="viewInstructionsLabel" layoutX="163.0" layoutY="47.0" prefHeight="53.0" prefWidth="259.0" text="                          View Instructions">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
       <TableView fx:id="viewInstructionsTableView" layoutX="93.0" layoutY="121.0" prefHeight="200.0" prefWidth="385.0">
         <columns>
           <TableColumn fx:id="customerNameTableCol" prefWidth="132.66665649414062" text="Customer Name" />

@@ -34,4 +34,8 @@ public class UpdateDeliveryStatusController
             throw new RuntimeException(e);
         }
     }
+
+    @javafx.fxml.FXML
+    public void updateOnHandle(ActionEvent actionEvent) {
+    }
 }
