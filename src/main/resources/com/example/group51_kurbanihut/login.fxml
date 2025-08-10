@@ -21,5 +21,11 @@
             <Font size="30.0" />
          </font>
       </Label>
+      <Label layoutX="147.0" layoutY="300.0" text="Don't Have An Account? ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="328.0" layoutY="298.0" mnemonicParsing="false" onAction="#signUpOnHandle" text="Sign up" />
    </children>
 </AnchorPane>

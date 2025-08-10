@@ -9,6 +9,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import static com.example.group51_kurbanihut.SignUpModel.accountHolders;
+
 public class LoginController {
     @javafx.fxml.FXML
     private PasswordField passwordTextField;
@@ -23,6 +25,20 @@ public class LoginController {
 
     @javafx.fxml.FXML
     public void handleLoginButton(ActionEvent actionEvent) {
+        for (SignUpModel holders:accountHolders){
+            if ((userNameTextfield.getText().equals(holders.getName())) && (passwordTextField.getText().equals(holders.getPassword()))){
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("NewUserDashboard.fxml"));
+                    Scene nextScene = new Scene(fxmlLoader.load());
+                    Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                    nextStage.setScene(nextScene);
+                    nextStage.show();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
         if ((userNameTextfield.getText().equals("Delivery Man")) && (passwordTextField.getText().equals("1234"))) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/DeliveryMan.fxml"));
@@ -95,4 +111,16 @@ public class LoginController {
         }
     }
 
+    @javafx.fxml.FXML
+    public void signUpOnHandle(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signUp.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
