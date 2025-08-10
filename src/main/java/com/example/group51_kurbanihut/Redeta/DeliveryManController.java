@@ -34,7 +34,7 @@ public class DeliveryManController
     @javafx.fxml.FXML
     public void viewDeliveriesOnHandle(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/ViewDeliveries.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/AssignedDeliveries.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setTitle(" Assigned Deliveries");

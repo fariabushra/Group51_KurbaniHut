@@ -32,5 +32,6 @@
       <ComboBox fx:id="deliveryStatusComboBox" layoutX="115.0" layoutY="209.0" prefWidth="150.0" promptText="Delivery Status" />
       <Button layoutX="517.0" layoutY="494.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
       <Button layoutX="426.0" layoutY="221.0" mnemonicParsing="false" onAction="#addDeliveryOnHandle" text="Add Delivery" />
+      <Label fx:id="confirmationLabel" layoutX="280.0" layoutY="258.0" text="Confirmation message" />
    </children>
 </AnchorPane>
