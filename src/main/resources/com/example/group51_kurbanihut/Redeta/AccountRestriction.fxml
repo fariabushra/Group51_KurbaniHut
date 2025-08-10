@@ -4,23 +4,23 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AccountRestrictionController">
    <children>
-      <Label fx:id="accountRestrictionLabel" layoutX="184.0" layoutY="43.0" prefHeight="31.0" prefWidth="174.0" text="         Account Restriction" />
-      <TableView fx:id="accountRestrictionTableview" layoutX="91.0" layoutY="108.0" prefHeight="153.0" prefWidth="200.0">
+      <Label fx:id="accountRestrictionLabel" layoutX="191.0" layoutY="42.0" prefHeight="31.0" prefWidth="193.0" text="         Account Restriction">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TableView fx:id="accountRestrictionTableview" layoutX="92.0" layoutY="107.0" prefHeight="153.0" prefWidth="299.0">
         <columns>
-          <TableColumn fx:id="nameTableCol" prefWidth="97.33334350585938" text="Name" />
-          <TableColumn fx:id="roleTableCol" prefWidth="101.33331298828125" text="Role" />
+          <TableColumn fx:id="nameTableCol" prefWidth="141.33334350585938" text="Name" />
+          <TableColumn fx:id="roleTableCol" prefWidth="156.00002034505206" text="Role" />
         </columns>
       </TableView>
-      <Text layoutX="335.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-      <TextField fx:id="filteredNameTextField" layoutX="385.0" layoutY="188.0" />
-      <Button layoutX="415.0" layoutY="236.0" mnemonicParsing="false" onAction="#blockOnHandle" text="Block" />
-      <Button layoutX="474.0" layoutY="236.0" mnemonicParsing="false" onAction="#unblockOnHandle" text="Unblock" />
+      <Button layoutX="307.0" layoutY="282.0" mnemonicParsing="false" onAction="#blockOnHandle" text="Block" />
+      <Button layoutX="384.0" layoutY="282.0" mnemonicParsing="false" onAction="#unblockOnHandle" text="Unblock" />
+      <Button layoutX="508.0" layoutY="351.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

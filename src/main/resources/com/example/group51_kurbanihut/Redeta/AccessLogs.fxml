@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AccessLogsController">
    <children>
       <TableView fx:id="accessLogsTableView" layoutX="37.0" layoutY="104.0" prefHeight="200.0" prefWidth="300.0">
@@ -27,5 +26,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Button layoutX="489.0" layoutY="336.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

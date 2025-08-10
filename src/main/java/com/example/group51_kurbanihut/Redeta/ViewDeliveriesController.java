@@ -1,16 +1,17 @@
 package com.example.group51_kurbanihut.Redeta;
 
+import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
-public class AssignedDeliveriesController
+public class ViewDeliveriesController
 {
     @javafx.fxml.FXML
-    private TextField addressTextField;
-    @javafx.fxml.FXML
     private DatePicker dateDatePicker;
-    @javafx.fxml.FXML
-    private DatePicker filteredDateDatePicker;
     @javafx.fxml.FXML
     private TableView assignedDeliveriesTableView;
     @javafx.fxml.FXML
@@ -28,21 +29,34 @@ public class AssignedDeliveriesController
     @javafx.fxml.FXML
     private TableColumn deliveryStatusTableCol;
     @javafx.fxml.FXML
-    private ComboBox filteredDeliveryStatusComboBox;
-    @javafx.fxml.FXML
     private TableColumn customerNameTableCol;
     @javafx.fxml.FXML
     private ComboBox cattleIDComboBox;
+    @javafx.fxml.FXML
+    private TextField locationTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void searchDeliveryOnHandle(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void backOnHandle(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/DeliveryMan.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void addDeliveryOnHandle(ActionEvent actionEvent) {
     }
 }
