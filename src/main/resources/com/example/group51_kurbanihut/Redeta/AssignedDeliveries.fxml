@@ -8,31 +8,30 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AssignedDeliveriesController">
+<AnchorPane prefHeight="534.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.ViewDeliveriesController">
    <children>
       <TableView fx:id="assignedDeliveriesTableView" layoutX="52.0" layoutY="296.0" prefHeight="179.0" prefWidth="507.0">
         <columns>
           <TableColumn fx:id="customerNameTableCol" prefWidth="109.33331298828125" text="Customer Name" />
           <TableColumn fx:id="cattleIDTableCol" prefWidth="98.66665649414062" text="Cattle Id" />
             <TableColumn fx:id="deliveryStatusTableCol" prefWidth="106.66668701171875" text="Delivery Status" />
-            <TableColumn fx:id="addressTableCol" prefWidth="96.66668701171875" text="Address" />
+            <TableColumn fx:id="addressTableCol" prefWidth="96.66668701171875" text="Location" />
             <TableColumn fx:id="dateTableCol" prefWidth="104.66664632161462" text="Date" />
         </columns>
       </TableView>
-      <TextField fx:id="customerNameTextField" layoutX="115.0" layoutY="105.0" />
-      <TextField fx:id="addressTextField" layoutX="115.0" layoutY="160.0" />
-      <DatePicker fx:id="dateDatePicker" layoutX="103.0" layoutY="207.0" promptText="Date" />
-      <ComboBox fx:id="filteredDeliveryStatusComboBox" layoutX="351.0" layoutY="207.0" prefHeight="25.0" prefWidth="181.0" promptText="Filtered Delivery Status" />
-      <ComboBox fx:id="cattleIDComboBox" layoutX="376.0" layoutY="93.0" prefWidth="150.0" />
-      <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" />
-      <Text layoutX="320.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cattle Id" />
-      <Text layoutX="52.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
-      <Button layoutX="429.0" layoutY="256.0" mnemonicParsing="false" onAction="#searchDeliveryOnHandle" text="Search Delivery" />
-      <DatePicker fx:id="filteredDateDatePicker" layoutX="354.0" layoutY="159.0" promptText="Filtered Date" />
-      <Label fx:id="assignedDeliveriesLabel" layoutX="96.0" layoutY="32.0" prefHeight="38.0" prefWidth="391.0" text="                                               Assigned Deliveries" />
-      <ComboBox fx:id="deliveryStatusComboBox" layoutX="115.0" layoutY="256.0" prefWidth="150.0" promptText="Delivery Status" />
+      <TextField fx:id="customerNameTextField" layoutX="115.0" layoutY="105.0" promptText="Name" />
+      <TextField fx:id="locationTextField" layoutX="115.0" layoutY="160.0" promptText="Location" />
+      <DatePicker fx:id="dateDatePicker" layoutX="351.0" layoutY="160.0" promptText="Date" />
+      <ComboBox fx:id="cattleIDComboBox" layoutX="351.0" layoutY="105.0" prefWidth="150.0" promptText="Cattle Id" />
+      <Label fx:id="assignedDeliveriesLabel" layoutX="68.0" layoutY="29.0" prefHeight="38.0" prefWidth="391.0" text="                                               Assigned Deliveries">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="deliveryStatusComboBox" layoutX="115.0" layoutY="209.0" prefWidth="150.0" promptText="Delivery Status" />
       <Button layoutX="517.0" layoutY="494.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+      <Button layoutX="426.0" layoutY="221.0" mnemonicParsing="false" onAction="#addDeliveryOnHandle" text="Add Delivery" />
+      <Label fx:id="confirmationLabel" layoutX="280.0" layoutY="258.0" text="Confirmation message" />
    </children>
 </AnchorPane>

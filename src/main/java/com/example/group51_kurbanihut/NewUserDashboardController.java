@@ -1,23 +1,13 @@
-package com.example.group51_kurbanihut.Redeta;
+package com.example.group51_kurbanihut;
 
-import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class UpdateDeliveryStatusController
+public class NewUserDashboardController
 {
-    @javafx.fxml.FXML
-    private Label updateStatusLabel;
-    @javafx.fxml.FXML
-    private Label confirmationMessageLabel;
-    @javafx.fxml.FXML
-    private ComboBox deliveryStatusComboBox;
-
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -25,7 +15,7 @@ public class UpdateDeliveryStatusController
     @javafx.fxml.FXML
     public void backOnHandle(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/DeliveryMan.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -33,9 +23,5 @@ public class UpdateDeliveryStatusController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @javafx.fxml.FXML
-    public void updateOnHandle(ActionEvent actionEvent) {
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.AccessLogsController">
+   <children>
+      <TableView fx:id="accessLogsTableView" layoutX="37.0" layoutY="104.0" prefHeight="200.0" prefWidth="300.0">
+         <columns>
+            <TableColumn fx:id="nameTableCol" prefWidth="116.79998779296875" text="Name" />
+            <TableColumn fx:id="entryTimeTableCol" prefWidth="97.60003662109375" text="Entry Time" />
+            <TableColumn fx:id="locationTableCol" prefWidth="85.5999755859375" text="Location" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="selectDateDatePicker" layoutX="378.0" layoutY="127.0" promptText="Select Date" />
+      <ComboBox fx:id="selectLocationComboBox" layoutX="378.0" layoutY="178.0" prefHeight="26.0" prefWidth="175.0" promptText="Select Location" />
+      <Button layoutX="449.0" layoutY="235.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="26.0" prefWidth="103.0" text="Search" />
+      <Label fx:id="accessLogsLabel" layoutX="233.0" layoutY="36.0" text="Access Logs">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="489.0" layoutY="336.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+   </children>
+</AnchorPane>

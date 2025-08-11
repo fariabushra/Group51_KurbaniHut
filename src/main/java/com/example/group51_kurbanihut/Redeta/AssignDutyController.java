@@ -5,33 +5,32 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class ClearDataController
+public class AssignDutyController
 {
     @javafx.fxml.FXML
-    private TableColumn nameTableCol;
+    private TableColumn assignedZoneTableCol;
     @javafx.fxml.FXML
-    private TableColumn roleTableCol;
+    private ComboBox zoneComboBox;
     @javafx.fxml.FXML
-    private TableView clearDataTableView;
-    @javafx.fxml.FXML
-    private TableColumn idTableCol;
+    private TextField nameTextField;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
-    private Label removeDataLabel;
+    private TableColumn officerNameTableCol;
+    @javafx.fxml.FXML
+    private TableView assignDutyTableView;
+    @javafx.fxml.FXML
+    private Label assignDutyLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void clearDataOnHandle(ActionEvent actionEvent) {
+    public void assignZoneOnHandle(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

@@ -5,33 +5,32 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class ClearDataController
+public class AccessLogsController
 {
     @javafx.fxml.FXML
     private TableColumn nameTableCol;
     @javafx.fxml.FXML
-    private TableColumn roleTableCol;
+    private Label accessLogsLabel;
     @javafx.fxml.FXML
-    private TableView clearDataTableView;
+    private TableView accessLogsTableView;
     @javafx.fxml.FXML
-    private TableColumn idTableCol;
+    private TableColumn entryTimeTableCol;
     @javafx.fxml.FXML
-    private Label confirmationMessageLabel;
+    private DatePicker selectDateDatePicker;
     @javafx.fxml.FXML
-    private Label removeDataLabel;
+    private TableColumn locationTableCol;
+    @javafx.fxml.FXML
+    private ComboBox selectLocationComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void clearDataOnHandle(ActionEvent actionEvent) {
+    public void searchButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

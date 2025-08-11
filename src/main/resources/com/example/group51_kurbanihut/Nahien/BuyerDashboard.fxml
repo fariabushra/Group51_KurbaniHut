@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="376.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.BuyerDashboardController">
    <children>
-      <Button layoutX="14.0" layoutY="93.0" mnemonicParsing="false" onAction="#cattlelIstButton" prefHeight="26.0" prefWidth="130.0" text="Cattle List" />
+      <Button layoutX="14.0" layoutY="93.0" mnemonicParsing="false" onAction="#cattlelistButton" prefHeight="26.0" prefWidth="130.0" text="Cattle List" />
       <Label layoutX="94.0" layoutY="14.0" text="Buyer Dashboard">
          <font>
             <Font size="27.0" />
@@ -16,9 +16,10 @@
       <Button layoutX="14.0" layoutY="132.0" mnemonicParsing="false" onAction="#searchCattleByTypeButton" text="Search Cattle by Type" />
       <Button layoutX="14.0" layoutY="168.0" mnemonicParsing="false" onAction="#viewCattleDetailsButton" prefHeight="26.0" prefWidth="130.0" text="View Cattle Details" />
       <Button layoutX="14.0" layoutY="208.0" mnemonicParsing="false" onAction="#addToFavouriteButton" prefHeight="26.0" prefWidth="130.0" text="Add to Favourite" />
-      <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#bookCatlleButton" prefHeight="26.0" prefWidth="98.0" text="Book Cattle" />
+      <Button layoutX="250.0" layoutY="93.0" mnemonicParsing="false" onAction="#bookCattleButton" prefHeight="26.0" prefWidth="98.0" text="Book Cattle" />
       <Button layoutX="250.0" layoutY="132.0" mnemonicParsing="false" onAction="#cancelBookingButton" text="Cancel Booking" />
       <Button layoutX="250.0" layoutY="168.0" mnemonicParsing="false" onAction="#paymentButton" prefHeight="26.0" prefWidth="98.0" text="Payment" />
       <Button layoutX="251.0" layoutY="208.0" mnemonicParsing="false" onAction="#sendFeedbackButton" prefHeight="26.0" prefWidth="98.0" text="Send Feedback" />
+      <Button layoutX="349.0" layoutY="341.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="26.0" prefWidth="59.0" text="Log Out" />
    </children>
 </AnchorPane>

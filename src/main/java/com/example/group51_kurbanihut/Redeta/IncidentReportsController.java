@@ -5,33 +5,27 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ClearDataController
+public class IncidentReportsController
 {
     @javafx.fxml.FXML
-    private TableColumn nameTableCol;
+    private Label incidentReportLabel;
     @javafx.fxml.FXML
-    private TableColumn roleTableCol;
+    private ComboBox incidentComboBox;
     @javafx.fxml.FXML
-    private TableView clearDataTableView;
+    private TextArea descriptionTextArea;
     @javafx.fxml.FXML
-    private TableColumn idTableCol;
+    private TextField timeTextField;
     @javafx.fxml.FXML
-    private Label confirmationMessageLabel;
-    @javafx.fxml.FXML
-    private Label removeDataLabel;
+    private TextField locationTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void clearDataOnHandle(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -45,5 +39,9 @@ public class ClearDataController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void submitReportOnHandle(ActionEvent actionEvent) {
     }
 }

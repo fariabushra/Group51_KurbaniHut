@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.ViewEntryLogsController">
+   <children>
+      <Button layoutX="204.0" layoutY="226.0" mnemonicParsing="false" onAction="#submitOnHandle" text="Submit" />
+      <TableView fx:id="entryLogsTableView" layoutX="111.0" layoutY="282.0" prefHeight="167.0" prefWidth="377.0">
+        <columns>
+          <TableColumn fx:id="nameTableCol" prefWidth="124.66665649414062" text="Name" />
+            <TableColumn fx:id="roleTableCol" minWidth="0.0" prefWidth="138.0" text="Role" />
+          <TableColumn fx:id="dateTableCol" minWidth="0.0" prefWidth="113.33333333333331" text="Date" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nameTextField" layoutX="71.0" layoutY="87.0" />
+      <Text layoutX="27.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Label fx:id="entryLogsLabel" layoutX="221.0" layoutY="32.0" prefHeight="39.0" prefWidth="139.0" text="            Entry Logs">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <ComboBox fx:id="roleComboBox" layoutX="71.0" layoutY="180.0" prefWidth="150.0" />
+      <Button layoutX="525.0" layoutY="464.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+      <Text layoutX="32.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+      <Text layoutX="27.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+      <DatePicker fx:id="dateDatePicker" layoutX="71.0" layoutY="134.0" prefHeight="25.0" prefWidth="161.0" />
+   </children>
+</AnchorPane>
