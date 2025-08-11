@@ -7,29 +7,42 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
 public class ViewCattleListController
 {
     @javafx.fxml.FXML
-    private TableColumn CattleIDTableCol;
+    private TableColumn<CattleModel, String> CattleIDTableCol;
     @javafx.fxml.FXML
-    private TableView cattleListTableView;
+    private TableView<CattleModel> cattleListTableView;
     @javafx.fxml.FXML
-    private TableColumn weightTableCol;
+    private TableColumn<CattleModel, String> weightTableCol;
     @javafx.fxml.FXML
-    private TableColumn healthStatusTableCol;
+    private TableColumn<CattleModel, String> healthStatusTableCol;
     @javafx.fxml.FXML
-    private TableColumn heightTableCol;
+    private TableColumn<CattleModel, String> heightTableCol;
     @javafx.fxml.FXML
-    private TableColumn priceTableCol;
+    private TableColumn<CattleModel, Double> priceTableCol;
     @javafx.fxml.FXML
-    private TableColumn colourTableCol;
+    private TableColumn<CattleModel, String> colourTableCol;
     @javafx.fxml.FXML
-    private TableColumn ageTableCol;
+    private TableColumn<CattleModel, String> ageTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        CattleIDTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        ageTableCol.setCellValueFactory(new PropertyValueFactory<>("age"));
+        colourTableCol.setCellValueFactory(new PropertyValueFactory<>("colour"));
+        weightTableCol.setCellValueFactory(new PropertyValueFactory<>("weight"));
+        heightTableCol.setCellValueFactory(new PropertyValueFactory<>("height"));
+        priceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+        healthStatusTableCol.setCellValueFactory(new PropertyValueFactory<>("healthStatus"));
+
+        cattleListTableView.getItems().addAll(cattleList);
+
     }
 
     @javafx.fxml.FXML
