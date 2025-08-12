@@ -5,27 +5,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class IncidentReportsController
 {
     @javafx.fxml.FXML
     private Label incidentReportLabel;
     @javafx.fxml.FXML
-    private ComboBox incidentComboBox;
+    private ComboBox<String> incidentComboBox;
     @javafx.fxml.FXML
     private TextArea descriptionTextArea;
     @javafx.fxml.FXML
+    private Label warningLabel;
+    @javafx.fxml.FXML
     private TextField timeTextField;
     @javafx.fxml.FXML
-    private TextField locationTextField;
+    private ComboBox<String> locationComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        incidentComboBox.getItems().addAll("Unauthorized Entry","Emergency Situation","Security Threats","Equipment Damage");
+        locationComboBox.getItems().addAll("Entrance","Exist","Gate");
     }
 
     @javafx.fxml.FXML
@@ -43,5 +46,25 @@ public class IncidentReportsController
 
     @javafx.fxml.FXML
     public void submitReportOnHandle(ActionEvent actionEvent) {
+
+        if ((locationComboBox.getValue() == null || timeTextField.getText().isEmpty() || descriptionTextArea.getText().isEmpty() || incidentComboBox.getValue() == null)) {
+            warningLabel.setText("Please fill all the fields");
+            return;
+        }
+
+        IncidentReportModel incident = new IncidentReportModel(
+                locationComboBox.getValue(),
+                incidentComboBox.getValue(),
+                descriptionTextArea.getText(),
+                timeTextField.getText()
+        );
+
+
+        warningLabel.setText("Incident reported successfully and control center notified");
+        locationComboBox.getSelectionModel().clearSelection();;
+        timeTextField.clear();
+        descriptionTextArea.clear();
+        incidentComboBox.getSelectionModel().clearSelection();
     }
+
 }

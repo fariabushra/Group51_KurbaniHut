@@ -6,31 +6,59 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class AccessLogsController
 {
     @javafx.fxml.FXML
-    private TableColumn nameTableCol;
+    private TableColumn<AccessLogsModel,String> nameTableCol;
     @javafx.fxml.FXML
     private Label accessLogsLabel;
     @javafx.fxml.FXML
-    private TableView accessLogsTableView;
+    private TableView<AccessLogsModel> accessLogsTableView;
     @javafx.fxml.FXML
-    private TableColumn entryTimeTableCol;
+    private TableColumn<AccessLogsController,String> entryTimeTableCol;
     @javafx.fxml.FXML
-    private DatePicker selectDateDatePicker;
+    private TableColumn<AccessLogsController,String> locationTableCol;
     @javafx.fxml.FXML
-    private TableColumn locationTableCol;
+    private ComboBox<String> selectLocationComboBox;
     @javafx.fxml.FXML
-    private ComboBox selectLocationComboBox;
+    private Label warningLabel;
+    @javafx.fxml.FXML
+    private TextField timeTextField;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    ArrayList<AccessLogsModel> accessL= new ArrayList<>();
+
+    public AccessLogsController() {
+       accessL.add(new AccessLogsModel("Farid","Exist","5pm"));
+       accessL.add(new AccessLogsModel("Islam","Entrance","4pm"));
+       accessL.add(new AccessLogsModel("Hasan","Gate","4pm"));
+
     }
 
     @javafx.fxml.FXML
-    public void searchButtonOnAction(ActionEvent actionEvent) {
+    public void initialize() {
+        nameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        entryTimeTableCol.setCellValueFactory(new PropertyValueFactory<>("entryTime"));
+        locationTableCol.setCellValueFactory(new PropertyValueFactory<>("location"));
+
+        selectLocationComboBox.getItems().addAll("Entrance","Exit","Gate");
+
+        updateTable(accessL);
+
+
+        ArrayList<String> locations = new ArrayList<>();
+        for (AccessLogsModel log : accessL) {
+            if (!locations.contains(log.getLocation())) {
+                locations.add(log.getLocation());
+            }
+        }
+        selectLocationComboBox.getItems().addAll(locations);
     }
 
     @javafx.fxml.FXML
@@ -44,5 +72,38 @@ public class AccessLogsController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void searchButtonOnAction(ActionEvent actionEvent) {
+
+        String selectedDate = timeTextField.getText();
+        String selectedLocation = selectLocationComboBox.getValue();
+
+        ArrayList<AccessLogsModel> filteredLogs = new ArrayList<>();
+
+        for (AccessLogsModel log : accessL) {
+            boolean matchesDate = (selectedDate == null) || log.getEntryTime().equals(selectedDate);
+            boolean matchesLocation = (selectedLocation == null) || log.getLocation().equalsIgnoreCase(selectedLocation);
+
+            if (matchesDate && matchesLocation) {
+                filteredLogs.add(log);
+            }
+        }
+
+
+        accessLogsTableView.getItems().clear();
+        accessLogsTableView.getItems().addAll(filteredLogs);
+
+
+        if (filteredLogs.isEmpty()) {
+            warningLabel.setText("No records found for the selected filters.");
+        } else {
+            warningLabel.setText("");
+        }
+    }
+    private void updateTable(ArrayList<AccessLogsModel> logs) {
+        accessLogsTableView.getItems().clear();
+        accessLogsTableView.getItems().addAll(logs);
     }
 }
