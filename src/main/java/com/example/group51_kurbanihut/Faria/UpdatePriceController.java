@@ -9,27 +9,59 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
 public class UpdatePriceController
 {
     @javafx.fxml.FXML
     private Label updateTextLabel;
     @javafx.fxml.FXML
-    private TableColumn priceTableCol;
+    private TableColumn<CattleModel, Double> priceTableCol;
     @javafx.fxml.FXML
-    private TableColumn idTableCol;
+    private TableColumn<CattleModel, String> idTableCol;
     @javafx.fxml.FXML
     private TextField priceUpdateTextField;
     @javafx.fxml.FXML
-    private TableView priceTableView;
+    private TableView<CattleModel> priceTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
+        idTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        priceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        priceTableView.getItems().addAll(cattleList);
     }
 
     @javafx.fxml.FXML
     public void handleUpdateButton(ActionEvent actionEvent) {
+        CattleModel cattle = priceTableView.getSelectionModel().getSelectedItem();
+        if (cattle == null){
+            updateTextLabel.setText("No cattle added yet!");
+            return;
+
+        }
+        if (priceUpdateTextField.getText().isEmpty()){
+            updateTextLabel.setText("Enter valid price!");
+        }
+        double newPrice;
+        try {
+            newPrice = Double.parseDouble(priceUpdateTextField.getText());
+        } catch (NumberFormatException e) {
+            throw new RuntimeException(e);
+        }
+
+        cattle.setPrice(newPrice);
+        priceTableView.getItems().clear();
+        priceTableView.getItems().addAll(cattleList);
+
+        updateTextLabel.setText("Price updated!");
+
+
+
+
     }
 
     @javafx.fxml.FXML

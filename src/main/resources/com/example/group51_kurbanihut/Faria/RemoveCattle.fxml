@@ -6,11 +6,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="540.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.RemoveCattleController">
    <children>
-      <Button layoutX="403.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleRemovebutton" prefHeight="41.0" prefWidth="90.0" text="Remove">
+      <Button layoutX="413.0" layoutY="356.0" mnemonicParsing="false" onAction="#handleRemovebutton" prefHeight="41.0" prefWidth="90.0" text="Remove">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -21,16 +21,20 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TableView fx:id="listTableView" layoutX="35.0" layoutY="36.0" prefHeight="286.0" prefWidth="893.0">
+      <TableView fx:id="listTableView" layoutX="181.0" layoutY="109.0" prefHeight="226.0" prefWidth="578.0">
         <columns>
           <TableColumn fx:id="cattleIDTableCol" prefWidth="154.3999900817871" text="Cattle ID" />
-          <TableColumn fx:id="cattleColourTableView" prefWidth="111.20002746582031" text="Cattle Colour" />
-            <TableColumn fx:id="cattleAgeTableCol" prefWidth="95.199951171875" text="Cattle Age" />
-            <TableColumn fx:id="cattleWeightTableCol" prefWidth="115.20001220703125" text="Cattle Weight" />
-            <TableColumn fx:id="cattleHeightTableCol" prefWidth="112.0" text="Cattle Height" />
-            <TableColumn fx:id="cattlePriceTableCol" prefWidth="168.0" text="Cattle Price" />
-            <TableColumn fx:id="cattleHealthStatusTableCol" prefWidth="137.5999755859375" text="Cattle Health Status" />
+            <TableColumn fx:id="cattleWeightTableCol" prefWidth="220.79998779296875" text="Cattle Weight" />
+            <TableColumn fx:id="cattlePriceTableCol" prefWidth="201.5999755859375" text="Cattle Price" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
+      <Text layoutX="387.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove Cattle">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
