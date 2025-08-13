@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.IncidentReportsController">
    <children>
       <Label fx:id="incidentReportLabel" layoutX="231.0" layoutY="28.0" prefHeight="17.0" prefWidth="130.0" text="Incident Report">
@@ -17,10 +16,11 @@
          </font>
       </Label>
       <TextArea fx:id="descriptionTextArea" layoutX="90.0" layoutY="216.0" prefHeight="93.0" prefWidth="209.0" promptText="Description" />
-      <TextField fx:id="timeTextField" layoutX="90.0" layoutY="127.0" promptText="Time" />
       <ComboBox fx:id="incidentComboBox" layoutX="90.0" layoutY="168.0" prefWidth="150.0" promptText="Select Incident" />
       <Button layoutX="254.0" layoutY="341.0" mnemonicParsing="false" onAction="#submitReportOnHandle" text="Submit Report" />
-      <TextField fx:id="locationTextField" layoutX="90.0" layoutY="93.0" promptText="Location" />
       <Button layoutX="511.0" layoutY="341.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+      <Label fx:id="warningLabel" layoutX="346.0" layoutY="225.0" prefHeight="75.0" prefWidth="199.0" style="-fx-border-color: green;" />
+      <TextField fx:id="timeTextField" layoutX="90.0" layoutY="131.0" promptText="Time" />
+      <ComboBox fx:id="locationComboBox" layoutX="90.0" layoutY="88.0" prefWidth="150.0" promptText="Location" />
    </children>
 </AnchorPane>

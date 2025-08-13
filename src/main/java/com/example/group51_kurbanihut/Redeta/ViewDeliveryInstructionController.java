@@ -13,18 +13,19 @@ import javafx.stage.Stage;
 public class ViewDeliveryInstructionController
 {
     @javafx.fxml.FXML
-    private TableColumn instructionsTableCol;
+    private TableColumn<ViewDeliveryModel,String> instructionsTableCol;
     @javafx.fxml.FXML
-    private TableView viewInstructionsTableView;
+    private TableView<ViewDeliveryModel> viewInstructionsTableView;
     @javafx.fxml.FXML
-    private TableColumn addressTableCol;
+    private TableColumn<ViewDeliveryModel,String> addressTableCol;
     @javafx.fxml.FXML
-    private TableColumn customerNameTableCol;
+    private TableColumn<ViewDeliveryModel,String> customerNameTableCol;
     @javafx.fxml.FXML
     private Label viewInstructionsLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML
