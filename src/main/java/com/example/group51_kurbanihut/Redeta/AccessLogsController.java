@@ -28,8 +28,6 @@ public class AccessLogsController
     @javafx.fxml.FXML
     private ComboBox<String> selectLocationComboBox;
     @javafx.fxml.FXML
-    private Label warningLabel;
-    @javafx.fxml.FXML
     private TextField timeTextField;
 
     ArrayList<AccessLogsModel> accessL= new ArrayList<>();
@@ -58,7 +56,6 @@ public class AccessLogsController
                 locations.add(log.getLocation());
             }
         }
-        selectLocationComboBox.getItems().addAll(locations);
     }
 
     @javafx.fxml.FXML
@@ -91,16 +88,10 @@ public class AccessLogsController
             }
         }
 
-
         accessLogsTableView.getItems().clear();
         accessLogsTableView.getItems().addAll(filteredLogs);
 
 
-        if (filteredLogs.isEmpty()) {
-            warningLabel.setText("No records found for the selected filters.");
-        } else {
-            warningLabel.setText("");
-        }
     }
     private void updateTable(ArrayList<AccessLogsModel> logs) {
         accessLogsTableView.getItems().clear();

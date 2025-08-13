@@ -3,20 +3,26 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.UpdateDeliveryStatusController">
    <children>
-      <Label fx:id="updateStatusLabel" layoutX="67.0" layoutY="38.0" prefHeight="43.0" prefWidth="367.0" text="                                         Update Status">
+      <Label fx:id="updateStatusLabel" layoutX="65.0" layoutY="31.0" prefHeight="43.0" prefWidth="369.0" text="                                         Update Status">
          <font>
             <Font name="System Bold" size="17.0" />
          </font></Label>
-      <ComboBox fx:id="deliveryStatusComboBox" layoutX="186.0" layoutY="128.0" prefWidth="150.0" />
-      <Text layoutX="87.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Status" />
-      <Label fx:id="confirmationMessageLabel" layoutX="147.0" layoutY="229.0" prefHeight="112.0" prefWidth="277.0" style="-fx-border-color: green;" text="                       Confirmation Message" textAlignment="CENTER" />
+      <ComboBox fx:id="deliveryStatusComboBox" layoutX="373.0" layoutY="120.0" prefWidth="150.0" promptText="Status" />
+      <Label fx:id="confirmationMessageLabel" layoutX="143.0" layoutY="307.0" prefHeight="64.0" prefWidth="194.0" style="-fx-border-color: green;" textAlignment="CENTER" />
       <Button layoutX="495.0" layoutY="347.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
-      <Button layoutX="336.0" layoutY="174.0" mnemonicParsing="false" onAction="#updateOnHandle" text="Update" />
+      <Button layoutX="467.0" layoutY="174.0" mnemonicParsing="false" onAction="#updateOnHandle" text="Update" />
+      <TableView fx:id="updateStatusTableView" layoutX="67.0" layoutY="97.0" prefHeight="168.0" prefWidth="251.0">
+        <columns>
+          <TableColumn fx:id="customerNameTableCol" prefWidth="124.6666259765625" text="Customer Name" />
+          <TableColumn fx:id="deliveryStatusTableCol" prefWidth="125.33334350585938" text="Delivery Status" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
