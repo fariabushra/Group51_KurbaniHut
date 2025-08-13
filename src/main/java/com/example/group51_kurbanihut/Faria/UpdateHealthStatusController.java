@@ -9,27 +9,45 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
 public class UpdateHealthStatusController
 {
     @javafx.fxml.FXML
     private Label updateTextLabel;
     @javafx.fxml.FXML
-    private ComboBox updateHealthComboBox;
+    private ComboBox<String> updateHealthComboBox;
     @javafx.fxml.FXML
-    private TableColumn cattleIDTableCol;
+    private TableColumn<CattleModel,String> cattleIDTableCol;
     @javafx.fxml.FXML
-    private TableColumn healthStatusTableCol;
+    private TableColumn<CattleModel,String> healthStatusTableCol;
     @javafx.fxml.FXML
-    private TableView healthStatusTableView;
+    private TableView<CattleModel> healthStatusTableView;
 
     @javafx.fxml.FXML
     public void initialize() {
+        cattleIDTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        healthStatusTableCol.setCellValueFactory(new PropertyValueFactory<>("healthStatus"));
+
+        healthStatusTableView.getItems().addAll(cattleList);
+        updateHealthComboBox.getItems().addAll( "Vaccinated", "Healthy", "Under Observation");
+
     }
 
     @javafx.fxml.FXML
     public void handleUpdateStatusButton(ActionEvent actionEvent) {
+        CattleModel update = healthStatusTableView.getSelectionModel().getSelectedItem();
+        if (update == null) {
+            updateTextLabel.setText("No cattle selected yet!");
+            return;
+        }
+        update.setHealthStatus(updateHealthComboBox.getValue());
+
+        updateTextLabel.setText("Health status updated!");
+
     }
 
     @javafx.fxml.FXML

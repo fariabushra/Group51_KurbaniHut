@@ -10,14 +10,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
+import static com.example.group51_kurbanihut.Faria.CattleModel.totalPrice;
+
 public class ViewSalesController
 {
-    @javafx.fxml.FXML
-    private TableColumn historyTableCol;
-    @javafx.fxml.FXML
-    private TableView cattleHistoryTableView;
-    @javafx.fxml.FXML
-    private TableColumn cattleHistoryIDTableCol;
     @javafx.fxml.FXML
     private Label totalSaleLabel;
 
@@ -37,5 +33,11 @@ public class ViewSalesController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void handleSaleButton(ActionEvent actionEvent) {
+        totalSaleLabel.setText("Total sold amount: " + totalPrice);
+
     }
 }

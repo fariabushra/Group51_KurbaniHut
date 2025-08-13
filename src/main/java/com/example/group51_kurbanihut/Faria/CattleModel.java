@@ -1,11 +1,17 @@
 package com.example.group51_kurbanihut.Faria;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class CattleModel {
     private String cattleID, age, colour, weight, height, healthStatus;
     private double price;
     public static ArrayList<CattleModel> cattleList = new ArrayList<> ();
+
+    public static int countSales;
+    public static double totalPrice;
+
+
 
 
     public CattleModel() {

@@ -8,36 +8,56 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class SaleCattleController
-{
+import static com.example.group51_kurbanihut.Faria.CattleModel.*;
+
+public class SaleCattleController {
     @javafx.fxml.FXML
-    private TableColumn cattleIDTableCol;
+    private TableColumn<CattleModel, String> cattleIDTableCol;
     @javafx.fxml.FXML
-    private TableColumn weightTableCol;
+    private TableColumn<CattleModel, String> weightTableCol;
     @javafx.fxml.FXML
-    private TableColumn healthStatusTableCol;
-    @javafx.fxml.FXML
-    private TableColumn heightTableCol;
-    @javafx.fxml.FXML
-    private TableColumn priceTableCol;
+    private TableColumn<CattleModel, String> priceTableCol;
     @javafx.fxml.FXML
     private Label saleTextLabel;
     @javafx.fxml.FXML
-    private TableView saleCattleTableView;
+    private TableView<CattleModel> saleCattleTableView;
     @javafx.fxml.FXML
-    private TableColumn colourTableCol;
-    @javafx.fxml.FXML
-    private TableColumn ageTableCol;
+    private TableColumn<CattleModel, String> colourTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        cattleIDTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        colourTableCol.setCellValueFactory(new PropertyValueFactory<>("colour"));
+        weightTableCol.setCellValueFactory(new PropertyValueFactory<>("weight"));
+        priceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        saleCattleTableView.getItems().addAll(cattleList);
     }
 
     @javafx.fxml.FXML
     public void handleSaleCattleButton(ActionEvent actionEvent) {
+        CattleModel sale = saleCattleTableView.getSelectionModel().getSelectedItem();
+        if (sale == null) {
+            saleTextLabel.setText("No cattle selected yet!");
+            return;
+        }
+        cattleList.remove(sale);
+
+        saleCattleTableView.getItems().clear();
+        saleCattleTableView.getItems().addAll(cattleList);
+
+        saleTextLabel.setText("Cattle Sold!");
+
+        countSales += 1;
+        totalPrice += sale.getPrice();
+
     }
+
+
+
 
     @javafx.fxml.FXML
     public void handleDashboardButton(ActionEvent actionEvent) {

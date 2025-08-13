@@ -6,22 +6,19 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.SaleCattleController">
    <children>
-      <TableView fx:id="saleCattleTableView" layoutX="41.0" layoutY="14.0" prefHeight="200.0" prefWidth="846.0">
+      <TableView fx:id="saleCattleTableView" layoutX="101.0" layoutY="94.0" prefHeight="200.0" prefWidth="707.0">
         <columns>
-          <TableColumn fx:id="cattleIDTableCol" prefWidth="100.0000228881836" text="Cattle ID" />
-          <TableColumn fx:id="colourTableCol" prefWidth="120.79998779296875" text="Colour" />
-            <TableColumn fx:id="ageTableCol" prefWidth="97.5999755859375" text="Age" />
-            <TableColumn fx:id="weightTableCol" prefWidth="104.0" text="Weight" />
-            <TableColumn fx:id="heightTableCol" prefWidth="93.60000610351562" text="Height" />
-            <TableColumn fx:id="priceTableCol" prefWidth="172.800048828125" text="Price" />
-            <TableColumn fx:id="healthStatusTableCol" prefWidth="162.39990234375" text="Health Status" />
+          <TableColumn fx:id="cattleIDTableCol" prefWidth="114.4000473022461" text="Cattle ID" />
+          <TableColumn fx:id="colourTableCol" prefWidth="127.99993896484375" text="Colour" />
+            <TableColumn fx:id="weightTableCol" prefWidth="194.40005493164062" text="Weight" />
+            <TableColumn fx:id="priceTableCol" prefWidth="271.199951171875" text="Price" />
         </columns>
       </TableView>
-      <Button layoutX="266.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleSaleCattleButton" text="Sale Cattle">
+      <Button layoutX="111.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleSaleCattleButton" text="Sale Cattle">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -31,6 +28,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="saleTextLabel" layoutX="476.0" layoutY="230.0" prefHeight="39.0" prefWidth="246.0" />
+      <Label fx:id="saleTextLabel" layoutX="244.0" layoutY="311.0" prefHeight="39.0" prefWidth="246.0" />
+      <Text layoutX="391.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sale Cattle">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
