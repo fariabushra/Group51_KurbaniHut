@@ -27,6 +27,9 @@ public class Cattle {
         cattleList.add(this);
     }
 
+
+
+
     public String getId() {
         return id;
     }

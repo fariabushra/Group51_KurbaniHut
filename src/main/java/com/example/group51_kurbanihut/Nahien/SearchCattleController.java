@@ -8,24 +8,35 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class SearchCattleController
 {
     @javafx.fxml.FXML
-    private TableColumn cattleNameTableCol;
+    private TableColumn<Cattle,String> cattleNameTableCol;
     @javafx.fxml.FXML
-    private TableView cattleTableCol;
+    private TableView<String> cattleTableCol;
     @javafx.fxml.FXML
-    private TableColumn cattleIdTableCol;
+    private TableColumn<Cattle,String > cattleIdTableCol;
     @javafx.fxml.FXML
-    private TableColumn cattlePriceTableCol;
+    private TableColumn<Cattle, Double> cattlePriceTableCol;
     @javafx.fxml.FXML
-    private ComboBox cowGoatComboBox;
+    private ComboBox<String> cowGoatComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        cowGoatComboBox.getItems().addAll("Cow", "Goat");
+
+        cattleNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        cattlePriceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+
     }
+
 
     @javafx.fxml.FXML
     public void previousButton(ActionEvent actionEvent) {
