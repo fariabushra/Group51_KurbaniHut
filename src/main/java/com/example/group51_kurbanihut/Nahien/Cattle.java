@@ -13,8 +13,10 @@ public class Cattle {
     private int age;
     private String status;
 
-    private static ArrayList<Cattle> cattleList = new ArrayList<Cattle>();
-    private static ArrayList<Cattle> favouriteList = new ArrayList<>();
+
+    public static ArrayList<Cattle> cattleList = new ArrayList<Cattle>();
+    public static ArrayList<Cattle> favouriteList = new ArrayList<>();
+    public static ArrayList<Cattle> availableList = new ArrayList<>();
 
     public Cattle(String id, String name, String type, double price, double weight, int age, String status) {
         this.id = id;

@@ -20,7 +20,7 @@
             <TableColumn fx:id="cattleIdTableCol" prefWidth="75.0" text="Cattle ID" />
             <TableColumn fx:id="cattleTypeTableCol" prefWidth="75.0" text="Cattle Type" />
             <TableColumn fx:id="cattlePriceTableCol" prefWidth="75.0" text="Cattle Price" />
-            <TableColumn fx:id="availabilityTableCol" prefWidth="75.0" text=" Availability" />
+            <TableColumn fx:id="statusTableCol" prefWidth="75.0" text="Status" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

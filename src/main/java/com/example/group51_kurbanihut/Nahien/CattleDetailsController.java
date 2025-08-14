@@ -8,25 +8,36 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Nahien.Cattle.cattleList;
 
 public class CattleDetailsController
 {
     @javafx.fxml.FXML
-    private TableColumn cattleNameTableCol;
+    private TableColumn<Cattle, String> cattleNameTableCol;
     @javafx.fxml.FXML
-    private TableColumn availabilityTableCol;
+    private TableView<Cattle> cattleDetailsTableCol;
     @javafx.fxml.FXML
-    private TableView cattleDetailsTableCol;
+    private TableColumn<Cattle, String> cattleIdTableCol;
     @javafx.fxml.FXML
-    private TableColumn cattleIdTableCol;
+    private TableColumn<Cattle, Double> cattlePriceTableCol;
     @javafx.fxml.FXML
-    private TableColumn cattlePriceTableCol;
+    private TableColumn<Cattle, String> cattleTypeTableCol;
     @javafx.fxml.FXML
-    private TableColumn cattleTypeTableCol;
+    private TableColumn<Cattle,String> statusTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        cattleNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        cattleTypeTableCol.setCellValueFactory(new PropertyValueFactory<>("type"));
+        cattlePriceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+        statusTableCol.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        cattleDetailsTableCol.getItems().addAll(cattleList);
+
     }
 
     @javafx.fxml.FXML

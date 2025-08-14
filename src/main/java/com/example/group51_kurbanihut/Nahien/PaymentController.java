@@ -18,10 +18,12 @@ public class PaymentController
     @javafx.fxml.FXML
     private TextField cattleId;
     @javafx.fxml.FXML
-    private ComboBox paymentMethodComboBox;
+    private ComboBox<String> paymentMethodComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
+        paymentMethodComboBox.getItems().addAll("Bkash","Nagad");
+
     }
 
     @javafx.fxml.FXML
@@ -39,5 +41,11 @@ public class PaymentController
 
     @javafx.fxml.FXML
     public void makePaymentButton(ActionEvent actionEvent) {
+        if(cattleId.getText().isEmpty()){
+            bookedCattleList.setText("Type cattle Id");
+        } else if (paymentMethodComboBox.getValue()==null) {
+            bookedCattleList.setText("Choose payment method");
+        }
+
     }
 }
