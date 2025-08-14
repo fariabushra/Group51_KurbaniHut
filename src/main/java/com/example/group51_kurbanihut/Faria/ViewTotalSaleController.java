@@ -19,6 +19,7 @@ public class ViewTotalSaleController
 
     @javafx.fxml.FXML
     public void handleShowSaleButton(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
