@@ -20,8 +20,8 @@
       <Text layoutX="90.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
       <TextField fx:id="emailAddressTextField" layoutX="173.0" layoutY="215.0" />
       <Text layoutX="74.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address" />
-      <Button layoutX="254.0" layoutY="275.0" mnemonicParsing="false" onAction="#saveChangesOnhandle" text="Save Changes" />
-      <Label fx:id="confirmationMessageLabel" layoutX="375.0" layoutY="101.0" prefHeight="117.0" prefWidth="182.0" style="-fx-border-color: green;" text="          Confirmation Message" />
+      <Button layoutX="248.0" layoutY="273.0" mnemonicParsing="false" onAction="#saveChangesOnhandle" text="Save Changes" />
+      <Label fx:id="confirmationMessageLabel" layoutX="372.0" layoutY="186.0" prefHeight="57.0" prefWidth="203.0" style="-fx-border-color: green;" text="          " />
       <Button layoutX="474.0" layoutY="347.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

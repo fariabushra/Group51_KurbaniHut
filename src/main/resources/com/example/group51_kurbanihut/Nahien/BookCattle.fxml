@@ -15,7 +15,7 @@
          </font>
       </Label>
       <TextField fx:id="cattleIdTextField" layoutX="25.0" layoutY="103.0" promptText="Cattle Id" />
-      <TextArea fx:id="bookedCattleShow" layoutX="25.0" layoutY="170.0" prefHeight="216.0" prefWidth="366.0" />
+      <TextArea fx:id="bookedCattleShow" layoutX="25.0" layoutY="170.0" prefHeight="216.0" prefWidth="214.0" />
       <Button layoutX="190.0" layoutY="103.0" mnemonicParsing="false" onAction="#bookCattleButton" text="Book" />
       <Button layoutX="534.0" layoutY="361.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
    </children>

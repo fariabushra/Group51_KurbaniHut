@@ -25,7 +25,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox fx:id="cowGoatComboBox" layoutX="22.0" layoutY="106.0" prefWidth="150.0" />
+      <ComboBox fx:id="cowGoatComboBox" layoutX="22.0" layoutY="106.0" prefWidth="150.0" promptText="Cattle Type" />
       <Button layoutX="534.0" layoutY="374.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
    </children>
 </AnchorPane>

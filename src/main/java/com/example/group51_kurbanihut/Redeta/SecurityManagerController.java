@@ -15,12 +15,8 @@ public class SecurityManagerController
 
     @javafx.fxml.FXML
     public void logoutOnHandle(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void visitorEntryOnHnadle(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/VisitorEntry.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -29,6 +25,7 @@ public class SecurityManagerController
             throw new RuntimeException(e);
         }
     }
+
 
     @javafx.fxml.FXML
     public void sendAlertOnHandle(ActionEvent actionEvent) {
@@ -112,6 +109,19 @@ public class SecurityManagerController
     public void accountRestrictionOnHnadle(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/AccountRestriction.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void entryLogsOnHnadle(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/EntryLogs.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
