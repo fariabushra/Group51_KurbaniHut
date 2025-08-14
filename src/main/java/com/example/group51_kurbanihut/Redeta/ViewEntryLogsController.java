@@ -6,29 +6,44 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
+
+import static com.example.group51_kurbanihut.Redeta.ViewDeliveryModel.DeliveryList;
 
 public class ViewEntryLogsController
 {
     @javafx.fxml.FXML
-    private TableColumn nameTableCol;
+    private TableColumn<EntryLogsModel,String> nameTableCol;
     @javafx.fxml.FXML
-    private TableColumn roleTableCol;
+    private TableColumn<EntryLogsModel,String> roleTableCol;
     @javafx.fxml.FXML
     private DatePicker dateDatePicker;
     @javafx.fxml.FXML
     private TextField nameTextField;
     @javafx.fxml.FXML
-    private ComboBox roleComboBox;
+    private ComboBox<String> roleComboBox;
     @javafx.fxml.FXML
-    private TableView entryLogsTableView;
+    private Label warningLabel;
+    @javafx.fxml.FXML
+    private TableView<EntryLogsModel> entryLogsTableView;
     @javafx.fxml.FXML
     private Label entryLogsLabel;
     @javafx.fxml.FXML
-    private TableColumn dateTableCol;
+    private TableColumn<EntryLogsModel,String> dateTableCol;
+
+    ArrayList<EntryLogsModel> EntryLogsList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        roleTableCol.setCellValueFactory(new PropertyValueFactory<>("role"));
+        dateTableCol.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+        roleComboBox.getItems().addAll("Buyer","Seller","Delivery Man","Visitor");
+
     }
 
     @javafx.fxml.FXML
@@ -46,5 +61,20 @@ public class ViewEntryLogsController
 
     @javafx.fxml.FXML
     public void submitOnHandle(ActionEvent actionEvent) {
+        if((nameTextField.getText().isEmpty()) || (roleComboBox.getValue() == null) ||  (dateDatePicker.getValue() == null)){
+            warningLabel.setText("Please fill all info");
+            return;
+        }
+        EntryLogsModel entry = new EntryLogsModel (
+                nameTextField.getText(),
+                roleComboBox.getValue(),
+                dateDatePicker.getValue()
+        );
+
+        entryLogsTableView.getItems().clear();
+        EntryLogsList.add(entry);
+        entryLogsTableView.getItems().addAll(EntryLogsList);
+        warningLabel.setText("Entry Logs Submitted");
+
     }
 }
