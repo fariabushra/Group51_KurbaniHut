@@ -11,9 +11,8 @@
    <children>
       <TableView fx:id="cattleTableCol" layoutX="10.0" layoutY="101.0" prefHeight="262.0" prefWidth="580.0">
         <columns>
-          <TableColumn fx:id="cattleNameTableCol" prefWidth="75.0" text="Cattle Name" />
           <TableColumn fx:id="cattleIdTableCol" prefWidth="75.0" text="Cattle Id" />
-            <TableColumn fx:id="cattleTypeTableCol" prefWidth="75.0" text="Cattle Type" />
+            <TableColumn fx:id="cattleColorTableCol" prefWidth="75.0" text="Cattle Color" />
             <TableColumn fx:id="cattlePriceTableCol" prefWidth="75.0" text="Cattle Price" />
         </columns>
          <columnResizePolicy>

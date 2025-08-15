@@ -1,28 +1,39 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import com.example.group51_kurbanihut.Faria.CattleModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
+import static com.example.group51_kurbanihut.Nahien.BookCattleController.bookedCattle;
 
 public class PaymentController
 {
     @javafx.fxml.FXML
-    private TextArea bookedCattleList;
-    @javafx.fxml.FXML
-    private TextField cattleId;
-    @javafx.fxml.FXML
     private ComboBox<String> paymentMethodComboBox;
+    @javafx.fxml.FXML
+    private TableColumn<CattleModel,String> cattleIdCol;
+    @javafx.fxml.FXML
+    private TableView<CattleModel> cattleCol;
+    @javafx.fxml.FXML
+    private TableColumn<CattleModel,Double> cattlePriceCol;
+    @javafx.fxml.FXML
+    private Label label;
 
     @javafx.fxml.FXML
     public void initialize() {
         paymentMethodComboBox.getItems().addAll("Bkash","Nagad");
+
+        cattleIdCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        cattlePriceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        cattleCol.getItems().addAll(bookedCattle);
 
     }
 
@@ -41,11 +52,17 @@ public class PaymentController
 
     @javafx.fxml.FXML
     public void makePaymentButton(ActionEvent actionEvent) {
-        if(cattleId.getText().isEmpty()){
-            bookedCattleList.setText("Type cattle Id");
-        } else if (paymentMethodComboBox.getValue()==null) {
-            bookedCattleList.setText("Choose payment method");
+        if(paymentMethodComboBox.getValue()==null){
+            label.setText("Select payment method");
+            return;
         }
+        CattleModel c=cattleCol.getSelectionModel().getSelectedItem();
+        if(c==null){
+            return;
+        }
+        bookedCattle.remove(c);
+        label.setText("You have successfully purchased the cattle.");
+
 
     }
 }

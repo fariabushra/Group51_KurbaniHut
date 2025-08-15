@@ -1,5 +1,6 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import com.example.group51_kurbanihut.Faria.CattleModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -13,26 +14,27 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
+
 public class SearchCattleController
 {
     @javafx.fxml.FXML
-    private TableColumn<Cattle,String> cattleNameTableCol;
+    private TableView<CattleModel> cattleTableCol;
     @javafx.fxml.FXML
-    private TableView<String> cattleTableCol;
+    private TableColumn<CattleModel,String > cattleIdTableCol;
     @javafx.fxml.FXML
-    private TableColumn<Cattle,String > cattleIdTableCol;
-    @javafx.fxml.FXML
-    private TableColumn<Cattle, Double> cattlePriceTableCol;
+    private TableColumn<CattleModel, Double> cattlePriceTableCol;
     @javafx.fxml.FXML
     private ComboBox<String> cowGoatComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {
-        cowGoatComboBox.getItems().addAll("Cow", "Goat");
 
-        cattleNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        cowGoatComboBox.getItems().addAll("Red", "Black", "White");
+
+        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
         cattlePriceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+        cattleTableCol.getItems().addAll(cattleList);
 
 
     }
@@ -48,6 +50,19 @@ public class SearchCattleController
             nextStage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void searchOnClick(ActionEvent actionEvent) {
+        if(cowGoatComboBox.getValue()==null){
+            return;
+        }
+        cattleTableCol.getItems().clear();
+        for(CattleModel c: cattleList){
+            if(c.getColour().equals(cowGoatComboBox.getValue())){
+                cattleTableCol.getItems().add(c);
+            }
         }
     }
 }

@@ -1,5 +1,8 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
+
+import com.example.group51_kurbanihut.Faria.CattleModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -10,30 +13,26 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import static com.example.group51_kurbanihut.Nahien.Cattle.availableList;
-import static com.example.group51_kurbanihut.Nahien.Cattle.cattleList;
 
 public class ViewCattleController
 {
     @javafx.fxml.FXML
-    private TableColumn<Cattle, String> cattleNameTableCol;
+    private TableView<CattleModel> cattleTableCol;
     @javafx.fxml.FXML
-    private TableView<Cattle> cattleTableCol;
+    private TableColumn<CattleModel, String> cattleIdTableCol;
     @javafx.fxml.FXML
-    private TableColumn<Cattle, String> cattleIdTableCol;
+    private TableColumn<CattleModel, Double> cattlePriceTableCol;
     @javafx.fxml.FXML
-    private TableColumn<Cattle, Double> cattlePriceTableCol;
-    @javafx.fxml.FXML
-    private TableColumn<Cattle, String> cattleTypeTableCol;
+    private TableColumn<CattleModel, String> cattleColorTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {
-        cattleNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("id"));
-        cattleTypeTableCol.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        cattleIdTableCol.setCellValueFactory(new PropertyValueFactory<>("cattleID"));
+        cattleColorTableCol.setCellValueFactory(new PropertyValueFactory<>("colour"));
         cattlePriceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
 
-        cattleTableCol.getItems().addAll(availableList);
+        cattleTableCol.getItems().addAll(cattleList);
     }
 
     @javafx.fxml.FXML

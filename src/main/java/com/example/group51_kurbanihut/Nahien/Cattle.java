@@ -14,8 +14,8 @@ public class Cattle {
     private String status;
 
 
-    public static ArrayList<Cattle> cattleList = new ArrayList<Cattle>();
-    public static ArrayList<Cattle> favouriteList = new ArrayList<>();
+    //public static ArrayList<Cattle> cattleList = new ArrayList<Cattle>();
+
     public static ArrayList<Cattle> availableList = new ArrayList<>();
 
     public Cattle(String id, String name, String type, double price, double weight, int age, String status) {
@@ -27,10 +27,7 @@ public class Cattle {
         this.age = age;
         this.status = "Available";
 
-        cattleList.add(this);
-    }
-    public static ArrayList<Cattle> getAllCattle() {
-        return cattleList;
+
     }
 
     public String getId() {

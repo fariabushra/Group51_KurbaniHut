@@ -1,5 +1,6 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import com.example.group51_kurbanihut.Faria.CattleModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
+import static com.example.group51_kurbanihut.Nahien.BookCattleController.bookedCattle;
 
 public class CancelBookingController
 {
@@ -35,5 +39,20 @@ public class CancelBookingController
 
     @javafx.fxml.FXML
     public void cancelBookCattleButton(ActionEvent actionEvent) {
+        String idEntered = cattleIdTextField.getText();
+
+        if (idEntered.isEmpty()) {
+            bookedCattleShow.appendText("Please enter a cattle ID.\n");
+            return;
+        }
+
+
+        for (CattleModel c : cattleList) {
+            if (c.getCattleID().equals(idEntered)) {
+                bookedCattleShow.setText("The cattle has been removed from Booking");
+                bookedCattle.remove(c);
+            }
+        }
+        cattleIdTextField.clear();
     }
 }
