@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.FeedbackController">
    <children>
       <Label layoutX="196.0" layoutY="26.0" text=" Give feedback">
@@ -17,5 +16,7 @@
       <TextField fx:id="feedbackTextField" layoutX="36.0" layoutY="132.0" prefHeight="97.0" prefWidth="526.0" promptText="Type message for feedback" />
       <Button layoutX="36.0" layoutY="257.0" mnemonicParsing="false" onAction="#sendFeedbackButton" prefHeight="26.0" prefWidth="65.0" text="Send" />
       <Button layoutX="534.0" layoutY="353.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
+      <TextField fx:id="idTextField" layoutX="36.0" layoutY="85.0" promptText="Type Id" />
+      <Label fx:id="label" layoutX="36.0" layoutY="303.0" prefHeight="35.0" prefWidth="219.0" />
    </children>
 </AnchorPane>

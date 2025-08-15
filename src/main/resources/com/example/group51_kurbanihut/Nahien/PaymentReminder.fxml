@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.PaymentReminderController">
    <children>
       <Label layoutX="143.0" layoutY="14.0" text="Send Payment Reminder Message to Buyer">
@@ -28,5 +27,6 @@
       <TextField fx:id="reminderMessageTextField" layoutX="300.0" layoutY="82.0" prefHeight="90.0" prefWidth="264.0" promptText="Type payment reminder massage" />
       <Button layoutX="300.0" layoutY="194.0" mnemonicParsing="false" onAction="#replySendButton" text="Send" />
       <Button layoutX="534.0" layoutY="360.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
+      <Label fx:id="label" layoutX="300.0" layoutY="242.0" prefHeight="51.0" prefWidth="264.0" />
    </children>
 </AnchorPane>
