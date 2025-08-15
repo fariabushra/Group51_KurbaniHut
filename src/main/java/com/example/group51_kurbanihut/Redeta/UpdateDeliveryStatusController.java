@@ -61,5 +61,6 @@ public class UpdateDeliveryStatusController
         }
         deliveryS.setDeliveryStatus(deliveryStatusComboBox.getValue());
         confirmationMessageLabel.setText("Status Updated");
+        updateStatusTableView.refresh();
     }
 }

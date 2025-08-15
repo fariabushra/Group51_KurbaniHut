@@ -7,26 +7,41 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class ContactCustomerController
 {
     @javafx.fxml.FXML
-    private ComboBox messageTypeComboBox;
-    @javafx.fxml.FXML
     private Label conatctCustomerLabel;
     @javafx.fxml.FXML
     private TextField nameTextField;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
+    @javafx.fxml.FXML
+    private TextArea messageTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML
     public void sendMessageOnhandle(ActionEvent actionEvent) {
+        if((nameTextField.getText().isEmpty()) || (messageTextArea.getText().isEmpty())) {
+            confirmationMessageLabel.setText("Please fill all info");
+            return;
+
+        }
+            ContactCustomerModel contact = new ContactCustomerModel(
+                    nameTextField.getText(),
+                    messageTextArea.getText()
+            );
+
+        confirmationMessageLabel.setText("Message Sent to Customer");
+
+
     }
 
     @javafx.fxml.FXML

@@ -5,16 +5,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.CommunicateWithAdminController">
    <children>
-      <Label fx:id="communicateWithAdminLabel" layoutX="155.0" layoutY="56.0" prefHeight="44.0" prefWidth="224.0" text="              Communicate with admin" />
-      <ComboBox fx:id="issueComboBox" layoutX="178.0" layoutY="146.0" prefWidth="150.0" />
-      <Button layoutX="327.0" layoutY="291.0" mnemonicParsing="false" onAction="#requestSupportOnHandle" text="Request Support" />
-      <Text layoutX="65.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Your issue" wrappingWidth="104.66666666666674" />
-      <Text layoutX="70.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Optional Message" />
-      <TextField fx:id="optionalMessageTextField" layoutX="178.0" layoutY="214.0" />
+      <Label fx:id="communicateWithAdminLabel" layoutX="208.0" layoutY="56.0" prefHeight="44.0" prefWidth="143.0" text="Help &amp; Support">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="issueComboBox" layoutX="103.0" layoutY="146.0" prefWidth="150.0" promptText="Issue" />
+      <Button layoutX="216.0" layoutY="292.0" mnemonicParsing="false" onAction="#requestSupportOnHandle" text="Request Support" />
+      <TextField fx:id="optionalMessageTextField" layoutX="103.0" layoutY="215.0" prefHeight="44.0" prefWidth="226.0" promptText="Optional Message" />
       <Button layoutX="481.0" layoutY="345.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
    </children>
 </AnchorPane>

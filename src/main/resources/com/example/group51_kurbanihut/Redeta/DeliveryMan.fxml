@@ -3,17 +3,46 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.DeliveryManController">
    <children>
-      <Label fx:id="deliverymanDashboardLabel" layoutX="178.0" layoutY="37.0" prefHeight="58.0" prefWidth="205.0" text="             Delivery Man Dashboard" />
-      <Button layoutX="71.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewDeliveriesOnHandle" text="View Deliveries" />
-      <Button layoutX="72.0" layoutY="180.0" mnemonicParsing="false" onAction="#deliveryStatusOnHandle" text="Delivery Status" />
-      <Button layoutX="369.0" layoutY="193.0" mnemonicParsing="false" onAction="#updateProfileOnHandle" text="Update Profile" />
-      <Button layoutX="68.0" layoutY="303.0" mnemonicParsing="false" onAction="#contactCustomerOnHandle" text="Contact Customer" />
-      <Button layoutX="365.0" layoutY="265.0" mnemonicParsing="false" onAction="#helpSupportOnHandle" text="Help &amp; Support" />
-      <Button layoutX="365.0" layoutY="121.0" mnemonicParsing="false" onAction="#deliveryHistoryOnHandle" text="Delivery History" />
-      <Button layoutX="71.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewInstructionsOnHandle" text="View Instructions" />
-      <Button layoutX="495.0" layoutY="342.0" mnemonicParsing="false" onAction="#logoutOnHandle" text="Logout" />
+      <Label fx:id="deliverymanDashboardLabel" layoutX="139.0" layoutY="37.0" prefHeight="58.0" prefWidth="282.0" text="             Delivery Man Dashboard">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button layoutX="71.0" layoutY="121.0" mnemonicParsing="false" onAction="#viewDeliveriesOnHandle" text="View Deliveries">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="72.0" layoutY="180.0" mnemonicParsing="false" onAction="#deliveryStatusOnHandle" text="Delivery Status">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="364.0" layoutY="180.0" mnemonicParsing="false" onAction="#updateProfileOnHandle" text="Update Profile">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="68.0" layoutY="303.0" mnemonicParsing="false" onAction="#contactCustomerOnHandle" text="Contact Customer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="364.0" layoutY="300.0" mnemonicParsing="false" onAction="#helpSupportOnHandle" text="Help &amp; Support">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="359.0" layoutY="121.0" mnemonicParsing="false" onAction="#deliveryHistoryOnHandle" text="Delivery History">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="71.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewInstructionsOnHandle" text="View Instructions">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="495.0" layoutY="350.0" mnemonicParsing="false" onAction="#logoutOnHandle" text="Logout" />
+      <Button layoutX="364.0" layoutY="236.0" mnemonicParsing="false" onAction="#reportIssueOnHandle" text="Report Issue">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>

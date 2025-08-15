@@ -13,11 +13,11 @@
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <TableView fx:id="viewInstructionsTableView" layoutX="121.0" layoutY="124.0" prefHeight="200.0" prefWidth="385.0">
+      <TableView fx:id="viewInstructionsTableView" layoutX="67.0" layoutY="121.0" prefHeight="200.0" prefWidth="444.0">
         <columns>
           <TableColumn fx:id="customerNameTableCol" prefWidth="132.66665649414062" text="Customer Name" />
           <TableColumn fx:id="addressTableCol" prefWidth="129.33331298828125" text="Address" />
-            <TableColumn fx:id="instructionsTableCol" prefWidth="121.33331298828125" text="Instructions" />
+            <TableColumn fx:id="instructionsTableCol" prefWidth="180.66668701171875" text="Instructions" />
         </columns>
       </TableView>
       <Button layoutX="499.0" layoutY="349.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />

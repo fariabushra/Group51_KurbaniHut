@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Redeta.ReportIssuesController">
    <children>
-      <Text layoutX="52.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write Your Issue" />
-      <Button layoutX="271.0" layoutY="236.0" mnemonicParsing="false" onAction="#submitReportOnHandle" text="Submit Report" />
-      <Label fx:id="confirmationMessageLabel" layoutX="127.0" layoutY="302.0" prefHeight="63.0" prefWidth="257.0" style="-fx-border-color: green;" />
+      <Button layoutX="106.0" layoutY="269.0" mnemonicParsing="false" onAction="#submitReportOnHandle" prefHeight="25.0" prefWidth="107.0" text="Submit Report">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="confirmationMessageLabel" layoutX="48.0" layoutY="320.0" prefHeight="43.0" prefWidth="257.0" style="-fx-border-color: green;" />
       <Label layoutX="177.0" layoutY="34.0" prefHeight="50.0" prefWidth="172.0" text="          Report Issues">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <TextArea fx:id="issuesTextField" layoutX="149.0" layoutY="115.0" prefHeight="87.0" prefWidth="200.0" />
-      <Button layoutX="475.0" layoutY="339.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+      <Button layoutX="509.0" layoutY="342.0" mnemonicParsing="false" onAction="#backOnHandle" text="Back" />
+      <TextField fx:id="nameTextField" layoutX="65.0" layoutY="120.0" promptText="Customer Name" />
+      <ComboBox fx:id="issueComboBox" layoutX="65.0" layoutY="210.0" prefWidth="150.0" promptText="Select Issue" />
+      <TableView fx:id="reportIssueTableView" layoutX="280.0" layoutY="117.0" prefHeight="165.0" prefWidth="277.0">
+        <columns>
+          <TableColumn fx:id="nameTableCol" prefWidth="88.66661071777344" text="Name" />
+            <TableColumn fx:id="cattleIDTableCol" prefWidth="95.3333740234375" text="Cattle Id" />
+            <TableColumn fx:id="issueTableCol" prefWidth="92.66671752929688" text="Issue" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cattleIdCombobox" layoutX="65.0" layoutY="164.0" prefWidth="150.0" promptText="Cattle ID" />
    </children>
 </AnchorPane>

@@ -127,4 +127,19 @@ public class DeliveryManController
             throw new RuntimeException(e);
         }
     }
+
+    @javafx.fxml.FXML
+    public void reportIssueOnHandle(ActionEvent actionEvent) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Redeta/ReportIssues.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setTitle("Update Delivery Status");
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+
 }
