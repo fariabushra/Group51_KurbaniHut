@@ -17,8 +17,8 @@
       <Button layoutX="28.0" layoutY="187.0" mnemonicParsing="false" onAction="#solveFeedbackButton" prefHeight="26.0" prefWidth="156.0" text="Solve Feedback" />
       <Button layoutX="292.0" layoutY="142.0" mnemonicParsing="false" onAction="#topPriorityButton" prefHeight="26.0" prefWidth="174.0" text="Top Priority" />
       <Button layoutX="292.0" layoutY="96.0" mnemonicParsing="false" onAction="#paymentReminderButton" prefHeight="26.0" prefWidth="174.0" text="Payment Reminder" />
-      <Button layoutX="292.0" layoutY="235.0" mnemonicParsing="false" onAction="#flagAsSuspiciousButton" text="Flag an Account as Suspicious" />
-      <Button layoutX="292.0" layoutY="187.0" mnemonicParsing="false" onAction="#updateFaqButton" prefHeight="26.0" prefWidth="174.0" text="Update FAQ" />
+      <Button layoutX="292.0" layoutY="187.0" mnemonicParsing="false" onAction="#flagAsSuspiciousButton" text="Flag an Account as Suspicious" />
+      <Button layoutX="292.0" layoutY="235.0" mnemonicParsing="false" onAction="#updateFaqButton" prefHeight="26.0" prefWidth="174.0" text="Update FAQ" />
       <Button layoutX="28.0" layoutY="235.0" mnemonicParsing="false" onAction="#deleteSolveFeedbackButton" prefHeight="26.0" prefWidth="156.0" text="Delete Solved Feedback" />
       <Button layoutX="442.0" layoutY="365.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="26.0" prefWidth="66.0" text="Log Out" />
    </children>
