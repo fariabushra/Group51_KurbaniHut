@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.TopPriorityFeedbackController">
    <children>
       <AnchorPane layoutY="4.0" prefHeight="474.0" prefWidth="608.0">
@@ -19,8 +18,8 @@
             </Label>
             <TableView fx:id="feedbackTable" layoutX="20.0" layoutY="80.0" prefHeight="275.0" prefWidth="570.0">
                <columns>
-                  <TableColumn fx:id="feedbackColumn" prefWidth="380.79998779296875" text="Feedback" />
-                  <TableColumn fx:id="statusColumn" prefWidth="177.5999755859375" text="Status" />
+                  <TableColumn fx:id="feedbackCol" prefWidth="380.79998779296875" text="Feedback" />
+                  <TableColumn fx:id="idCol" prefWidth="177.5999755859375" text="Customer Id" />
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -28,6 +27,7 @@
             </TableView>
             <Button layoutX="220" layoutY="370" onAction="#markTopPriorityButton" text="Mark as Top Priority" />
             <Button layoutX="531.0" layoutY="424.0" onAction="#previousButton" text="Previous" />
+            <Label fx:id="label" layoutX="20.0" layoutY="407.0" prefHeight="51.0" prefWidth="374.0" />
          </children>
       </AnchorPane>
    </children>

@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.FlagAccountController">
    <children>
       <Label layoutX="77.0" layoutY="7.0" text="Flag a Customer’s Account as Suspicious">
@@ -15,10 +14,10 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <TableView fx:id="tableColumn" layoutX="14.0" layoutY="100.0" prefHeight="260.0" prefWidth="302.0">
+      <TableView fx:id="tableCol" layoutX="14.0" layoutY="100.0" prefHeight="260.0" prefWidth="302.0">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Buyer Id " />
-          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Buyer Name" />
+          <TableColumn fx:id="idCol" prefWidth="120.800048828125" text="Buyer Id " />
+          <TableColumn fx:id="feedbackCol" prefWidth="179.199951171875" text="Feedbacks" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -26,5 +25,6 @@
       </TableView>
       <Button layoutX="345.0" layoutY="100.0" mnemonicParsing="false" onAction="#flagSuspiciousButton" text="Flag as Suspicious" />
       <Button layoutX="523.0" layoutY="347.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
+      <Label fx:id="label" layoutX="345.0" layoutY="145.0" prefHeight="63.0" prefWidth="242.0" />
    </children>
 </AnchorPane>

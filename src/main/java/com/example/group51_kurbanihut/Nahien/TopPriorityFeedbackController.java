@@ -8,21 +8,30 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Nahien.Feedback.feedbackList;
+import static com.example.group51_kurbanihut.Nahien.Feedback.solveList;
 
 public class TopPriorityFeedbackController
 {
     @javafx.fxml.FXML
-    private TableColumn feedbackColumn;
-    @javafx.fxml.FXML
     private Label titleLabel;
     @javafx.fxml.FXML
-    private TableColumn statusColumn;
+    private TableView<Feedback> feedbackTable;
     @javafx.fxml.FXML
-    private TableView feedbackTable;
+    private TableColumn<Feedback, String> feedbackCol;
+    @javafx.fxml.FXML
+    private TableColumn<Feedback, String> idCol;
+    @javafx.fxml.FXML
+    private Label label;
 
     @javafx.fxml.FXML
     public void initialize() {
+        feedbackCol.setCellValueFactory(new PropertyValueFactory<>("massage"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        feedbackTable.getItems().addAll(feedbackList);
     }
 
     @javafx.fxml.FXML
@@ -40,5 +49,16 @@ public class TopPriorityFeedbackController
 
     @javafx.fxml.FXML
     public void markTopPriorityButton(ActionEvent actionEvent) {
+        if(feedbackTable.getItems().isEmpty()){
+            return;
+        }
+        Feedback c=feedbackTable.getSelectionModel().getSelectedItem();
+        if(c == null){
+            label.setText("Select a message from the table");
+            return;
+        }
+        else {
+            label.setText("Marked as Top Priority");
+        }
     }
 }
