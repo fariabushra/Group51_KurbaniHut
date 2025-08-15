@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Nahien.UpdateFAQSController">
    <children>
       <Label layoutX="135.0" layoutY="14.0" text="Update Frequently Asked Questions ">
@@ -17,5 +16,7 @@
       <TextArea fx:id="questionTextArea" layoutX="14.0" layoutY="79.0" prefHeight="200.0" prefWidth="200.0" promptText="Type new FAQ's" />
       <Button layoutX="14.0" layoutY="297.0" mnemonicParsing="false" onAction="#faqUpdateButton" text="Update" />
       <Button layoutX="532.0" layoutY="360.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
+      <Label fx:id="label" layoutX="14.0" layoutY="335.0" prefHeight="49.0" prefWidth="262.0" />
+      <TextArea fx:id="allFaq" layoutX="285.0" layoutY="79.0" prefHeight="200.0" prefWidth="262.0" text="1. Q: Do you offer home delivery for cattle?&#10;A: Yes, we provide safe transport to your location.&#10;&#10;2. Q: Are the cattle vaccinated?&#10;A: All cattle are health-checked and vaccinated before sale.&#10;&#10;3. Q: Can I book a cattle in advance?&#10;A: Yes, advance booking is available with a small deposit." />
    </children>
 </AnchorPane>

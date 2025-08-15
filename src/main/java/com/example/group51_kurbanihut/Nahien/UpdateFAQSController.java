@@ -5,13 +5,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Nahien.Feedback.feedbackList;
 
 public class UpdateFAQSController
 {
     @javafx.fxml.FXML
     private TextArea questionTextArea;
+    @javafx.fxml.FXML
+    private Label label;
+    @javafx.fxml.FXML
+    private TextArea allFaq;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -32,5 +39,12 @@ public class UpdateFAQSController
 
     @javafx.fxml.FXML
     public void faqUpdateButton(ActionEvent actionEvent) {
+        if(questionTextArea.getText().isEmpty()){
+            label.setText("Write new FAQ's ");
+            return;
+        }
+        allFaq.setText(questionTextArea.getText());
+        questionTextArea.setText("");
+        label.setText("New FAQ's added!");
     }
 }
