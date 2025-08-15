@@ -13,20 +13,6 @@ public class BuyerDashboardController
     public void initialize() {
     }
 
-    @Deprecated
-    public void cattlelIstButton(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/ViewCattle.fxml"));
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
     @javafx.fxml.FXML
     public void addToFavouriteButton(ActionEvent actionEvent) {
         try {
@@ -55,19 +41,9 @@ public class BuyerDashboardController
 
     }
 
-    @Deprecated
-    public void bookCatlleButton(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/BookCattle.fxml"));
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
 
-    }
+
+
 
     @javafx.fxml.FXML
     public void searchCattleByTypeButton(ActionEvent actionEvent) {
@@ -125,18 +101,8 @@ public class BuyerDashboardController
 
     }
 
-    @javafx.fxml.FXML
-    public void cattlelistButton(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/BookCattle.fxml"));
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
+
+
 
     @javafx.fxml.FXML
     public void bookCattleButton(ActionEvent actionEvent) {
@@ -162,5 +128,19 @@ public class BuyerDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void cattleListButton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Nahien/ViewCattle.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

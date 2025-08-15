@@ -1,5 +1,6 @@
 package com.example.group51_kurbanihut.Nahien;
 
+import com.example.group51_kurbanihut.Faria.CattleModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +12,10 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
+
 public class AddFavouriteController {
-    private static ArrayList<Cattle> favouriteList = new ArrayList<>();
+    private static ArrayList<CattleModel> favouriteList = new ArrayList<>();
 
     @javafx.fxml.FXML
     private TextArea favouriteCattleTextArea;
@@ -34,23 +37,13 @@ public class AddFavouriteController {
             return;
         }
 
-        Cattle found = null;
-        for (Cattle c : Cattle.getAllCattle()) {
-            if (c.getId().equals(idEntered)) {
-                found = c;
-                break;
+
+        for (CattleModel c : cattleList) {
+            if (c.getCattleID().equals(idEntered)) {
+                favouriteCattleTextArea.setText("Cattle has been added to the Favourites");
+                favouriteList.add(c);
             }
         }
-
-        if (found != null) {
-            favouriteList.add(found);
-            favouriteCattleTextArea.appendText(
-                    found.getName() + " (ID: " + found.getId() + ") added to favourites.\n"
-            );
-        } else {
-            favouriteCattleTextArea.appendText("Cattle ID not found.\n");
-        }
-
         cattleId.clear();
     }
 

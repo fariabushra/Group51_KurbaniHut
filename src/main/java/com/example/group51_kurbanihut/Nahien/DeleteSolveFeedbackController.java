@@ -5,24 +5,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static com.example.group51_kurbanihut.Nahien.Feedback.feedbackList;
+import static com.example.group51_kurbanihut.Nahien.Feedback.solveList;
 
 public class DeleteSolveFeedbackController
 {
     @javafx.fxml.FXML
-    private TableView solvedFeedbackTable;
+    private TableView<Feedback> solvedFeedbackTable;
     @javafx.fxml.FXML
-    private TableColumn solvedFeedbackColumn;
+    private TableColumn<Feedback,String> solvedFeedbackColumn;
+    @javafx.fxml.FXML
+    private Label label;
 
     @javafx.fxml.FXML
     public void initialize() {
+        solvedFeedbackColumn.setCellValueFactory(new PropertyValueFactory<>("massage"));
+        solvedFeedbackTable.getItems().addAll(solveList);
     }
 
-    @Deprecated
-    public void handleDelete(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void previousButton(ActionEvent actionEvent) {
@@ -39,5 +45,16 @@ public class DeleteSolveFeedbackController
 
     @javafx.fxml.FXML
     public void deleteFeedbackButton(ActionEvent actionEvent) {
+        Feedback c= solvedFeedbackTable.getSelectionModel().getSelectedItem();
+        if (c == null) {
+            label.setText("Select a massage");
+            return;
+        }
+        solveList.remove(c);
+        feedbackList.remove(c);
+        solvedFeedbackTable.getItems().clear();
+        solvedFeedbackTable.getItems().addAll(solveList);
+        label.setText("Success");
+
     }
 }

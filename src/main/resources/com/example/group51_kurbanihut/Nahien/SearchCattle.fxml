@@ -17,7 +17,6 @@
       </Label>
       <TableView fx:id="cattleTableCol" layoutX="20.0" layoutY="158.0" prefHeight="200.0" prefWidth="559.0">
         <columns>
-          <TableColumn fx:id="cattleNameTableCol" prefWidth="75.0" text="Cattle Name" />
           <TableColumn fx:id="cattleIdTableCol" prefWidth="75.0" text="Cattle Id" />
             <TableColumn fx:id="cattlePriceTableCol" prefWidth="75.0" text="Cattle Price" />
         </columns>
@@ -25,7 +24,8 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox fx:id="cowGoatComboBox" layoutX="22.0" layoutY="106.0" prefWidth="150.0" promptText="Cattle Type" />
+      <ComboBox fx:id="cowGoatComboBox" layoutX="22.0" layoutY="106.0" prefWidth="150.0" promptText="Cattle Colour" />
       <Button layoutX="534.0" layoutY="374.0" mnemonicParsing="false" onAction="#previousButton" text="Previous" />
+      <Button layoutX="182.0" layoutY="106.0" mnemonicParsing="false" onAction="#searchOnClick" text="Search" />
    </children>
 </AnchorPane>
