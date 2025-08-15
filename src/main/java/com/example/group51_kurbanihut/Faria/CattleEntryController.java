@@ -10,6 +10,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
 import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
 public class CattleEntryController
@@ -76,8 +80,7 @@ public class CattleEntryController
                 cattleWeightTextField.getText(),
                 cattleHeightTextField.getText(),
                 Double.parseDouble(priceTextField.getText()),
-                healthStatusComboBox.getValue()
-        );
+                healthStatusComboBox.getValue());
         cattleList.add(cattle);
 
         errorTextField.setText("Cattle Submit Successful!");

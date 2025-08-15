@@ -6,11 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class ViewSellerController {
@@ -35,16 +37,57 @@ public class ViewSellerController {
         sellerEmailTableCol.setCellValueFactory(new PropertyValueFactory<>("email"));
         passwordTableCol.setCellValueFactory(new PropertyValueFactory<>("password"));
 
-        sellerList.add(new SellerModel("Niti", "0234567", "niti@gmail", "2345"));
-        sellerList.add(new SellerModel("Sadman", "0238567", "sadman@gmail", "2645"));
-        sellerList.add(new SellerModel("Nahin", "0234367", "nahin@gmail", "2745"));
-        sellerList.add(new SellerModel("Sami", "0334567", "sami@gmail", "2845"));
+       sellerList.add(new SellerModel("Niti", "0234567", "niti@gmail", "2345"));
+       sellerList.add(new SellerModel("Sadman", "0238567", "sadman@gmail", "2645"));
+       sellerList.add(new SellerModel("Nahin", "0234367", "nahin@gmail", "2745"));
+       sellerList.add(new SellerModel("Sami", "0334567", "sami@gmail", "2845"));
+
+        try {
+            File f = new File("Data/seller.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (SellerModel a : sellerList) {
+                oos.writeObject(a);
+            }
+            oos.close();
+        } catch (Exception e){
+}
 
 
 
+        viewSellerTableView.getItems().addAll(sellerList);
 
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("Data/seller.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
 
-       viewSellerTableView.getItems().addAll(sellerList);
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                viewSellerTableView.getItems().addAll((SellerModel) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+       }
+}
     }
 
     @javafx.fxml.FXML

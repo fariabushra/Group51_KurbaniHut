@@ -5,10 +5,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 
 import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
@@ -41,7 +46,10 @@ public class ViewCattleListController
         priceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
         healthStatusTableCol.setCellValueFactory(new PropertyValueFactory<>("healthStatus"));
 
-        cattleListTableView.getItems().addAll(cattleList);
+
+
+
+
 
     }
 

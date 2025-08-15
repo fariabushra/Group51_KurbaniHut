@@ -5,11 +5,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.io.*;
 
 import static com.example.group51_kurbanihut.Faria.CattleModel.cattleList;
 
@@ -33,6 +36,7 @@ public class RemoveCattleController
         cattlePriceTableCol.setCellValueFactory(new PropertyValueFactory<>("price"));
 
         listTableView.getItems().addAll(cattleList);
+
     }
 
     @javafx.fxml.FXML
@@ -49,6 +53,7 @@ public class RemoveCattleController
         listTableView.getItems().addAll(cattleList);
 
         removeTextLabel.setText("Cattle removed!");
+
     }
 
     @javafx.fxml.FXML

@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 
-public class AppendeableObjectOutputStreamSeller extends ObjectOutputStream {
-    public AppendeableObjectOutputStreamSeller(OutputStream out) throws IOException {
+public class AppendableObjectOutputStreamCattle extends ObjectOutputStream {
+    public AppendableObjectOutputStreamCattle(OutputStream out) throws IOException {
         super(out);
     }
 
@@ -14,6 +14,3 @@ public class AppendeableObjectOutputStreamSeller extends ObjectOutputStream {
         //
     }
 }
-
-
-

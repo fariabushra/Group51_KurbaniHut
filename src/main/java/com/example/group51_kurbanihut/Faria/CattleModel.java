@@ -1,9 +1,10 @@
 package com.example.group51_kurbanihut.Faria;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class CattleModel {
+public class CattleModel implements Serializable {
     private String cattleID, age, colour, weight, height, healthStatus;
     private double price;
     public static ArrayList<CattleModel> cattleList = new ArrayList<> ();

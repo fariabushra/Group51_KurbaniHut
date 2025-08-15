@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="859.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.ViewBuyerController">
    <children>
       <TableView fx:id="buyerTableView" layoutX="17.0" layoutY="42.0" prefHeight="200.0" prefWidth="822.0">
         <columns>
-          <TableColumn fx:id="buyerFullNameTableCol" prefWidth="211.20001792907715" text="Full Name" />
-          <TableColumn fx:id="buyerUserNameTableCol" prefWidth="186.39996337890625" text="User Name" />
-            <TableColumn fx:id="buyerPhoneNoTableCol" prefWidth="190.39999389648438" text="Phone No." />
-            <TableColumn fx:id="buyerEmailTableCol" prefWidth="233.60009765625" text="Email" />
+          <TableColumn fx:id="buyerFullNameTableCol" prefWidth="211.20001792907715" text="Name" />
+          <TableColumn fx:id="buyerPhoneNoTableCol" prefWidth="186.39996337890625" text="Phone No." />
+            <TableColumn fx:id="buyerEmailTableCol" prefWidth="190.39999389648438" text="Email" />
+            <TableColumn fx:id="buyerPasswordTableCol" prefWidth="233.60009765625" text="Password" />
         </columns>
       </TableView>
       <Button layoutX="722.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleDashboardButton" text="&lt;&lt;Dashboard">
