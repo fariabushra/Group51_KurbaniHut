@@ -12,6 +12,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 import static com.example.group51_kurbanihut.Redeta.ViewDeliveryModel.DeliveryList;
 
 public class UpdateDeliveryStatusController
@@ -23,19 +25,28 @@ public class UpdateDeliveryStatusController
     @javafx.fxml.FXML
     private ComboBox<String> deliveryStatusComboBox;
     @javafx.fxml.FXML
-    private TableColumn<ViewDeliveryModel,String> deliveryStatusTableCol;
+    private TableColumn<UpdateDeliveryStatusModel,String> deliveryStatusTableCol;
     @javafx.fxml.FXML
-    private TableColumn<ViewDeliveryModel,String> customerNameTableCol;
+    private TableColumn<UpdateDeliveryStatusModel,String> customerNameTableCol;
     @javafx.fxml.FXML
-    private TableView<ViewDeliveryModel> updateStatusTableView;
+    private TableView<UpdateDeliveryStatusModel> updateStatusTableView;
+
+    ArrayList<UpdateDeliveryStatusModel> statusList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-        customerNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        deliveryStatusTableCol.setCellValueFactory(new PropertyValueFactory<>("deliveryStatus"));
 
-        deliveryStatusComboBox.getItems().addAll("Out For Delivery","Delivered","Delivery Failed");
-        updateStatusTableView.getItems().addAll(DeliveryList);
+        customerNameTableCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        deliveryStatusTableCol.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        deliveryStatusComboBox.getItems().addAll("Delivered","Out for delivery","Delivery Failed");
+
+        statusList.add(new UpdateDeliveryStatusModel("Fahim","Delivered"));
+        statusList.add(new UpdateDeliveryStatusModel("Islam","Delivery Failed"));
+        statusList.add(new UpdateDeliveryStatusModel("Rahman","Out for Delivery"));
+        statusList.add(new UpdateDeliveryStatusModel("Hasan","Delivery Failed"));
+
+        updateStatusTableView.getItems().addAll(statusList);
 
     }
 
@@ -54,13 +65,13 @@ public class UpdateDeliveryStatusController
 
     @javafx.fxml.FXML
     public void updateOnHandle(ActionEvent actionEvent) {
-        ViewDeliveryModel deliveryS = updateStatusTableView.getSelectionModel().getSelectedItem();
+       UpdateDeliveryStatusModel deliveryS = updateStatusTableView.getSelectionModel().getSelectedItem();
         if(deliveryStatusComboBox.getValue() == null || deliveryS == null){
-            confirmationMessageLabel.setText("Please Fill All Info");
+            confirmationMessageLabel.setText("Invalid.Please select a valid status");
             return;
         }
-        deliveryS.setDeliveryStatus(deliveryStatusComboBox.getValue());
-        confirmationMessageLabel.setText("Status Updated");
+        deliveryS.setStatus(deliveryStatusComboBox.getValue());
+        confirmationMessageLabel.setText("Delivery status updated successfully");
         updateStatusTableView.refresh();
     }
 }
