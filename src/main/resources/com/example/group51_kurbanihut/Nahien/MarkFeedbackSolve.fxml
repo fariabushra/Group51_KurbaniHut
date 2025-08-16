@@ -14,7 +14,7 @@
          <Font size="25.0" />
       </font></Label>
 
-    <TableView fx:id="feedbackTable" layoutX="20.0" layoutY="80.0" prefHeight="275.0" prefWidth="560">
+    <TableView fx:id="feedbackTable" layoutX="20.0" layoutY="61.0" prefHeight="275.0" prefWidth="560">
         <columns>
             <TableColumn fx:id="feedbackColumn" prefWidth="380.79998779296875" text="Feedback" />
             <TableColumn fx:id="idCol" prefWidth="177.5999755859375" text="Customer Id" />
