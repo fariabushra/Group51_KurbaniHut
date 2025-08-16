@@ -1,16 +1,19 @@
 package com.example.group51_kurbanihut.Redeta;
 
+import com.example.group51_kurbanihut.Faria.SellerModel;
 import com.example.group51_kurbanihut.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class ViewDeliveryInstructionController
@@ -38,9 +41,54 @@ public class ViewDeliveryInstructionController
         instructionList.add(new ViewInstructionModel("Hasan","Khilgoan","Avoid Front Gate"));
         instructionList.add(new ViewInstructionModel("Ahmed","Rampura","Please Arrive After 6pm"));
 
+
+        try {
+            File f = new File("Data/DeliveryMan.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (ViewInstructionModel a : instructionList) {
+                oos.writeObject(a);
+            }
+            oos.close();
+        } catch (Exception e){
+        }
+
         viewInstructionsTableView.getItems().addAll(instructionList);
 
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("Data/DeliveryMan.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                viewInstructionsTableView.getItems().addAll((ViewInstructionModel) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
+
 
     @javafx.fxml.FXML
     public void backOnHandle(ActionEvent actionEvent) {
