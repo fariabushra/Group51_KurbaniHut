@@ -13,13 +13,13 @@ import javafx.stage.Stage;
 public class PendingSellerController
 {
     @javafx.fxml.FXML
-    private TableColumn sellerUserNameTableCol;
-    @javafx.fxml.FXML
     private TableView pendingSellerTableView;
     @javafx.fxml.FXML
     private Label textLabel;
     @javafx.fxml.FXML
     private TableColumn sellerFullNameTableCol;
+    @javafx.fxml.FXML
+    private TableColumn sellerEmailTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {

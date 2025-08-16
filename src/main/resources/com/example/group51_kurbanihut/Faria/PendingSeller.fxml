@@ -7,13 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="491.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.PendingSellerController">
    <children>
       <TableView fx:id="pendingSellerTableView" layoutX="157.0" layoutY="46.0" prefHeight="200.0" prefWidth="578.0">
         <columns>
-          <TableColumn fx:id="sellerFullNameTableCol" prefWidth="289.5999984741211" text="Seller Full Name" />
-          <TableColumn fx:id="sellerUserNameTableCol" prefWidth="288.8000793457031" text="Seller User Name" />
+          <TableColumn fx:id="sellerFullNameTableCol" prefWidth="289.5999984741211" text="Seller Name" />
+          <TableColumn fx:id="sellerEmailTableCol" prefWidth="288.8000793457031" text="Seller Email" />
         </columns>
       </TableView>
       <Button layoutX="317.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleApproveButton" text="Approve">

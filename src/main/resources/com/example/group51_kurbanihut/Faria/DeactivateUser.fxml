@@ -7,13 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="428.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.DeactivateUserController">
    <children>
-      <TableView fx:id="deactivateUserTableView" layoutX="54.0" layoutY="49.0" prefHeight="200.0" prefWidth="794.0">
+      <TableView fx:id="deactivateUserTableView" layoutX="182.0" layoutY="50.0" prefHeight="200.0" prefWidth="582.0">
         <columns>
-          <TableColumn fx:id="fullNameTableCol" prefWidth="211.9999885559082" text="Full Name" />
-          <TableColumn fx:id="userNameTableCol" prefWidth="282.4000244140625" text="User Name" />
+          <TableColumn fx:id="userNameTableCol" prefWidth="282.4000244140625" text="Name" />
             <TableColumn fx:id="phoneNoTableCol" prefWidth="299.99993896484375" text="Phone No." />
         </columns>
       </TableView>

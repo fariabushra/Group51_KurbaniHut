@@ -8,13 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="889.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.group51_kurbanihut.Faria.ChangeUserRoleController">
    <children>
       <TableView fx:id="changeUserTableView" layoutX="26.0" layoutY="35.0" prefHeight="200.0" prefWidth="481.0">
         <columns>
-          <TableColumn fx:id="fullNameTableCol" prefWidth="241.5999641418457" text="Full Name" />
-          <TableColumn fx:id="userNameTableCol" prefWidth="239.20001220703125" text="User Name" />
+          <TableColumn fx:id="fullNameTableCol" prefWidth="241.5999641418457" text="Name" />
+          <TableColumn fx:id="emailTableCol" prefWidth="239.20001220703125" text="Email" />
         </columns>
       </TableView>
       <ComboBox fx:id="roleComboBox" layoutX="627.0" layoutY="35.0" prefWidth="150.0" promptText="Role" />

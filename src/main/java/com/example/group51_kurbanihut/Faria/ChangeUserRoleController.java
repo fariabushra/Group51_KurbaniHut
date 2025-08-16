@@ -14,8 +14,6 @@ import javafx.stage.Stage;
 public class ChangeUserRoleController
 {
     @javafx.fxml.FXML
-    private TableColumn userNameTableCol;
-    @javafx.fxml.FXML
     private ComboBox roleComboBox;
     @javafx.fxml.FXML
     private TableColumn fullNameTableCol;
@@ -23,6 +21,8 @@ public class ChangeUserRoleController
     private TableView changeUserTableView;
     @javafx.fxml.FXML
     private Label roleChangeTextlabel;
+    @javafx.fxml.FXML
+    private TableColumn emailTableCol;
 
     @javafx.fxml.FXML
     public void initialize() {

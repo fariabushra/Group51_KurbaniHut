@@ -17,8 +17,6 @@ public class DeactivateUserController
     @javafx.fxml.FXML
     private Label deactiveTextLabel;
     @javafx.fxml.FXML
-    private TableColumn fullNameTableCol;
-    @javafx.fxml.FXML
     private TableView deactivateUserTableView;
     @javafx.fxml.FXML
     private TableColumn phoneNoTableCol;
